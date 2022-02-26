@@ -8,7 +8,7 @@ import java.util.Collection;
 
 public interface DirectorRepository extends Neo4jRepository<Director, Long> {
 
-    @Query("MATCH (d:DIRECTOR) RETURN d")
+    @Query("MATCH (d:DIRECTOR)-[dir:DIRECTED]->(m:MOVIE) RETURN d, collect(dir), collect(m)")
     Collection<Director> getAllDirectors();
 
     @Query("MATCH (d:DIRECTOR) -[dir:DIRECTED]->(m:MOVIE) WHERE ID(d) = $id RETURN d, collect(dir), collect(m)")

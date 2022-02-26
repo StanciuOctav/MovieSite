@@ -16,7 +16,7 @@ public class ActorService {
         this.actorRepository = actorRepository;
     }
 
-    public Collection<Actor> getAll() {
+    public Collection<Actor> getAllActors() {
         return this.actorRepository.getAllActors();
     }
 }

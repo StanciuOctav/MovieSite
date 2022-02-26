@@ -20,7 +20,7 @@ public class Actor {
     private String bornIn;
     private Long netWorth;
 
-    @Relationship(type = "PLAYED_IN")
+    @Relationship(type = "ACTED_IN")
     private Collection<Movie> movies;
 
     public Actor() {}

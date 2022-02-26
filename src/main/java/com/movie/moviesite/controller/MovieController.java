@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
@@ -26,7 +27,7 @@ public class MovieController {
     }
 
     @GetMapping("/director/{id}")
-    public Collection<Movie> getMoviesDirectedBy(@PathVariable("id") Long id) {
-        return this.movieService.getMoviesDirectedBy(id);
+    public ArrayList<Movie> getMoviesDirectedBy(@PathVariable("id") Long id) {
+        return (ArrayList<Movie>) this.movieService.getMoviesDirectedBy(id);
     }
 }

@@ -21,7 +21,7 @@ public class ActorController {
     }
 
     @GetMapping
-    public Collection<Actor> getAl(){
-        return this.actorService.getAll();
+    public Collection<Actor> getAllActors(){
+        return this.actorService.getAllActors();
     }
 }

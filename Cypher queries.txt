@@ -11,8 +11,6 @@ MATCH (player:PLAYER) WHERE player.height >=2							RETURN player	SKIP 2	LIMIT 4
 MATCH (player:PLAYER) WHERE player.height >=2							RETURN player	ORDER BY player.height 	DESC'
 MATCH (player:PLAYER), (coach:COACH)								RETURN player, coach
 
-
-
 QUERIES BASED ON RELATIONSHIPS
 RELATIONSHIP CAN HAVE PROPRETIES
 - MATCH (player:PLAYER) -[:PLAYS_FOR]-> (team:TEAM)		WHERE team.name = "LA Lakers"		RETURN player
@@ -34,15 +32,11 @@ DELETE RELATIONSHIP:
 DELETE EVERYTHING:
 - MATCH (n) DETACH DELETE n
 
-
-
-
 CREATE:
 - CREATE (lebron:PLAYER:COACH:GENERAL_MANAGER {name: "LeBron James", height: 2.01}) RETURN lebron
 - CREATE (:PLAYER) - [:PLAYS_FOR {salary: 34000000}] -> (:TEAM {name: "LA Lakers"})
 - MATCH (lebron:PLAYER {name: "LeBron James"}), (lakers:TEAM {name: "LA Lakers"})
   CREATE (lebron) -[:PLAYS_FOR {salary: 40000000}]->(lakers)
-
 
 UPDATE:
 - MATCH (anthony:PLAYER) WHERE ID(anthony) = 0 SET anthony.name = "Anthony Davis" RETURN anthony
@@ -55,6 +49,11 @@ UPDATE:
 "MATCH (m:MOVIE) <-[pi:PLAYED_IN]-(a:ACTOR) \n" +
             "MATCH (m:MOVIE) <-[dir:DIRECTED]-(d:DIRECTOR)\n" +
             "RETURN m, collect(dir), collect(d), collect(pi), collect(a)"
+
+// PENTRU A SCHIMBA NUMELE UNEI RELATII
+MATCH (a:ACTOR) -[p:PLAYED_IN]-> (m:MOVIE)
+MERGE (a)-[:ACTED_IN]->(m)
+DELETE p
 
 
 

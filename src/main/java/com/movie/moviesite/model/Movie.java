@@ -19,7 +19,7 @@ public class Movie {
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private Director director;
 
-    @Relationship(type = "PLAYED_IN", direction = Relationship.Direction.INCOMING)
+    @Relationship(type = "ACTED_IN", direction = Relationship.Direction.INCOMING)
     private Collection<Actor> actors;
 
     public Movie() {}
@@ -31,6 +31,11 @@ public class Movie {
         this.releaseYear = releaseYear;
         this.director = director;
         this.actors = actors;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 
     public Long getId() {
