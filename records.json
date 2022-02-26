@@ -1,0 +1,682 @@
+﻿[
+  {
+    "a": {
+"identity": 0,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 120000000,
+"name": "Al Pacino",
+"age": 81
+      }
+    },
+    "b": {
+"identity": 18,
+"start": 0,
+"end": 12,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 12,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Heat",
+"genre": "Drama",
+"releaseYear": 1995
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 1,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 500000000,
+"name": "Robert De Niro",
+"age": 78
+      }
+    },
+    "b": {
+"identity": 6,
+"start": 1,
+"end": 13,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 13,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Taxi Driver",
+"genre": "Drama",
+"releaseYear": 1976
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 1,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 500000000,
+"name": "Robert De Niro",
+"age": 78
+      }
+    },
+    "b": {
+"identity": 5,
+"start": 1,
+"end": 12,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 12,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Heat",
+"genre": "Drama",
+"releaseYear": 1995
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 2,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 120000000,
+"name": "Christian Bale",
+"age": 48
+      }
+    },
+    "b": {
+"identity": 11,
+"start": 2,
+"end": 15,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 15,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"genre": "Action",
+"name": "The Dark Knight",
+"releaseYear": 2008
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 2,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 120000000,
+"name": "Christian Bale",
+"age": 48
+      }
+    },
+    "b": {
+"identity": 10,
+"start": 2,
+"end": 19,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 19,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"genre": "Adventure",
+"name": "Mowgli: Legend of the Jungley",
+"releaseYear": 2018
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 3,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "US",
+"netWorth": 260000000,
+"name": "Leonardo DiCaprio",
+"age": 47
+      }
+    },
+    "b": {
+"identity": 14,
+"start": 3,
+"end": 11,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 11,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Shutter Island",
+"genre": "Mistery",
+"releaseYear": 2010
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 3,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "US",
+"netWorth": 260000000,
+"name": "Leonardo DiCaprio",
+"age": 47
+      }
+    },
+    "b": {
+"identity": 13,
+"start": 3,
+"end": 14,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 14,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "The Departed",
+"genre": "Drama",
+"releaseYear": 2006
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 3,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "US",
+"netWorth": 260000000,
+"name": "Leonardo DiCaprio",
+"age": 47
+      }
+    },
+    "b": {
+"identity": 12,
+"start": 3,
+"end": 10,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 10,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Inception",
+"genre": "Action",
+"releaseYear": 2010
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 4,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 40000000,
+"name": "Benedict Cumberbatch",
+"age": 45
+      }
+    },
+    "b": {
+"identity": 15,
+"start": 4,
+"end": 19,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 19,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"genre": "Adventure",
+"name": "Mowgli: Legend of the Jungley",
+"releaseYear": 2018
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 5,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 180000000,
+"name": "Andy Serkis",
+"age": 57
+      }
+    },
+    "b": {
+"identity": 1,
+"start": 5,
+"end": 19,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 19,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"genre": "Adventure",
+"name": "Mowgli: Legend of the Jungley",
+"releaseYear": 2018
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 5,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 180000000,
+"name": "Andy Serkis",
+"age": 57
+      }
+    },
+    "b": {
+"identity": 0,
+"start": 5,
+"end": 8,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 8,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Venom",
+"genre": "Action",
+"releaseYear": 2018
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 6,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 45000000,
+"name": "Tom Hardy",
+"age": 44
+      }
+    },
+    "b": {
+"identity": 17,
+"start": 6,
+"end": 8,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 8,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Venom",
+"genre": "Action",
+"releaseYear": 2018
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 6,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 45000000,
+"name": "Tom Hardy",
+"age": 44
+      }
+    },
+    "b": {
+"identity": 16,
+"start": 6,
+"end": 10,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 10,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Inception",
+"genre": "Action",
+"releaseYear": 2010
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 9,
+"labels": [
+        "ACTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 400000000,
+"name": "Jack Nicholson",
+"age": 84
+      }
+    },
+    "b": {
+"identity": 19,
+"start": 9,
+"end": 14,
+"type": "PLAYED_IN",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 14,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "The Departed",
+"genre": "Drama",
+"releaseYear": 2006
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 16,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 250000000,
+"name": "Christopher Nolan",
+"age": 51
+      }
+    },
+    "b": {
+"identity": 3,
+"start": 16,
+"end": 15,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 15,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"genre": "Action",
+"name": "The Dark Knight",
+"releaseYear": 2008
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 16,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "UK",
+"netWorth": 250000000,
+"name": "Christopher Nolan",
+"age": 51
+      }
+    },
+    "b": {
+"identity": 2,
+"start": 16,
+"end": 10,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 10,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Inception",
+"genre": "Action",
+"releaseYear": 2010
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 17,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 200000000,
+"name": "Martin Scorsese",
+"age": 79
+      }
+    },
+    "b": {
+"identity": 9,
+"start": 17,
+"end": 14,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 14,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "The Departed",
+"genre": "Drama",
+"releaseYear": 2006
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 17,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 200000000,
+"name": "Martin Scorsese",
+"age": 79
+      }
+    },
+    "b": {
+"identity": 8,
+"start": 17,
+"end": 13,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 13,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Taxi Driver",
+"genre": "Drama",
+"releaseYear": 1976
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 17,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "USA",
+"netWorth": 200000000,
+"name": "Martin Scorsese",
+"age": 79
+      }
+    },
+    "b": {
+"identity": 7,
+"start": 17,
+"end": 11,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 11,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Shutter Island",
+"genre": "Mistery",
+"releaseYear": 2010
+      }
+    }
+  },
+  {
+    "a": {
+"identity": 18,
+"labels": [
+        "DIRECTOR"
+      ],
+"properties": {
+"bornIn": "SUA",
+"netWorth": 90000000,
+"name": "Michael Mann",
+"age": 79
+      }
+    },
+    "b": {
+"identity": 4,
+"start": 18,
+"end": 12,
+"type": "DIRECTED",
+"properties": {
+
+      }
+    },
+    "c": {
+"identity": 12,
+"labels": [
+        "MOVIE"
+      ],
+"properties": {
+"name": "Heat",
+"genre": "Drama",
+"releaseYear": 1995
+      }
+    }
+  }
+]
