@@ -27,4 +27,17 @@ public class DirectorController {
     public Collection<Director> getDirectedMovies(@RequestParam("id") Long id) {
         return this.directorService.getDirectedMovies(id);
     }
+
+    @PostMapping
+    public String saveDirector(@RequestBody Director director) {
+        this.directorService.saveDirector(director);
+        return "DIRECTOR SAVED";
+    }
+
+    @PatchMapping("/{dirId}")
+    public String updateDirector(@RequestBody Director director, @PathVariable Long dirId) {
+        this.directorService.updateDirector(director, dirId);
+        return "DIRECTOR UPDATED";
+    }
+
 }

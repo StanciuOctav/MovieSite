@@ -21,9 +21,23 @@ public class DirectorService {
     public Collection<Director> getAllDirectors() {
         return this.directorRepository.getAllDirectors();
     }
-
     public Collection<Director> getDirectedMovies(Long id) {
         return this.directorRepository.getDirectedMovies(id);
     }
+
+    public void saveDirector(Director director) {
+        this.directorRepository.save(director);
+    }
+
+    public void updateDirector(Director director, Long dirId) {
+        Director oldDir = this.directorRepository.getById(dirId);
+        oldDir.setId(director.getId());
+        oldDir.setName(director.getName());
+        oldDir.setAge(director.getAge());
+        oldDir.setBornIn(director.getBornIn());
+        oldDir.setNetWorth(director.getNetWorth());
+        this.directorRepository.save(oldDir);
+    }
+
 }
 
