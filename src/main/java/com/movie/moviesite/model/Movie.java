@@ -14,6 +14,7 @@ import java.util.Collection;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class Movie {
     @Id
     @GeneratedValue

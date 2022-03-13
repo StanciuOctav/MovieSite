@@ -8,9 +8,15 @@ import java.util.Collection;
 
 public interface MovieRepostitory extends Neo4jRepository<Movie, Long> {
 
-    @Query("MATCH (m:MOVIE) RETURN m")
+    @Query("MATCH (m:MOVIE)<-[ai:ACTED_IN]-(a:ACTOR)\n" +
+            "MATCH (m)<-[di:DIRECTED]-(d:DIRECTOR)\n" +
+            "RETURN m, collect(ai), collect(a), collect(di), collect(d)")
     Collection<Movie> getAllMovies();
 
-    @Query("MATCH (d:DIRECTOR) -[dir:DIRECTED]-> (m:MOVIE) WHERE ID(d) = $id RETURN DISTINCT m")
-    Collection<Movie> getMoviesDirectedBy(Long id);
+    @Query("MATCH (m:MOVIE)<-[ai:ACTED_IN]-(a:ACTOR)\n" +
+            "MATCH (m)<-[di:DIRECTED]-(d:DIRECTOR)\n" +
+            "WHERE ID(m) = $movieId\n" +
+            "RETURN m, collect(ai), collect(a), collect(di), collect(d)")
+    Movie getMovieById(Long movieId);
+
 }
