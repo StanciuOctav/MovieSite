@@ -33,5 +33,5 @@ public class Actor {
     private Long netWorth;
 
     @Relationship(type = "ACTED_IN")
-    private Collection<Movie> movies;
+    private Collection<Movie> moviesActedIn;
 }

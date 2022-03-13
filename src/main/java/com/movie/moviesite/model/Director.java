@@ -32,5 +32,5 @@ public class Director {
     private Long netWorth;
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.OUTGOING)
-    private Collection<Movie> movies;
+    private Collection<Movie> directedMovies;
 }

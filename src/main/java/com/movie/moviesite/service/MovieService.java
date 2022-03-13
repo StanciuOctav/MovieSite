@@ -37,7 +37,7 @@ public class MovieService {
             foundMovie.get().setName(movie.getName());
             foundMovie.get().setReleaseYear(movie.getReleaseYear());
             foundMovie.get().setDirector(movie.getDirector());
-            foundMovie.get().setActors(movie.getActors());
+            foundMovie.get().setActedInActors(movie.getActedInActors());
             this.movieRepostitory.save(foundMovie.get());
         }
     }

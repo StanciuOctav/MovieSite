@@ -1,5 +1,6 @@
 package com.movie.moviesite.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.movie.moviesite.annotations.ReleaseYearAnnotation;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
@@ -28,11 +29,19 @@ public class Movie {
     @ReleaseYearAnnotation
     private Integer releaseYear;
 
-    public final int date = LocalDate.now().getYear();
-
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private Director director;
 
     @Relationship(type = "ACTED_IN", direction = Relationship.Direction.INCOMING)
-    private Collection<Actor> actors;
+    private Collection<Actor> actedInActors;
+
+    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.INCOMING)
+    private Collection<User> watchListUsers;
+
+    /**
+     * For now, not a reason to have a User object in Movie
+     */
+    @JsonIgnore
+    @Relationship(type = "REVIEWED", direction = Relationship.Direction.INCOMING)
+    private User reviewer;
 }
