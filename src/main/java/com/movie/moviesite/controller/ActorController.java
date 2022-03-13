@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.Collection;
 
 @RestController
@@ -21,30 +22,30 @@ public class ActorController {
     }
 
     @GetMapping
-    public Collection<Actor> getAllActors(){
-        return this.actorService.getAllActors();
+    public ResponseEntity<Collection<Actor>> getAllActors() {
+        return ResponseEntity.ok(this.actorService.getAllActors());
     }
 
     @GetMapping("/{actorId}")
     public ResponseEntity<Actor> getActorById(@PathVariable Long actorId) {
-        return new ResponseEntity<>(this.actorService.getActorById(actorId), HttpStatus.FOUND);
+        return ResponseEntity.ok(this.actorService.getActorById(actorId));
     }
 
     @PostMapping
     public ResponseEntity<Actor> saveActor(@RequestBody Actor actor) {
         this.actorService.saveActor(actor);
-        return new ResponseEntity<>(actor, HttpStatus.CREATED);
+        return ResponseEntity.created(URI.create("/actors")).body(actor);
     }
 
-    @PatchMapping ("/{actorId}")
-    public ResponseEntity<Actor> updateActor(@RequestBody Actor actor, @PathVariable Long actorId) {
-        this.actorService.updateActor(actor, actorId);
-        return new ResponseEntity<>(actor, HttpStatus.ACCEPTED);
+    @PatchMapping("/{actorId}")
+    public ResponseEntity<Actor> updateActorById(@RequestBody Actor actor, @PathVariable Long actorId) {
+        this.actorService.updateActorById(actor, actorId);
+        return ResponseEntity.ok(actor);
     }
 
     @DeleteMapping("/{actorId}")
-    public ResponseEntity<Long> deleteActor(@PathVariable Long actorId) {
-        this.actorService.deleteActor(actorId);
-        return new ResponseEntity<>(actorId, HttpStatus.OK);
+    public ResponseEntity<String> deleteActorById(@PathVariable Long actorId) {
+        this.actorService.deleteActorById(actorId);
+        return ResponseEntity.ok("Deleted actor with the id " + actorId + "\n");
     }
 }

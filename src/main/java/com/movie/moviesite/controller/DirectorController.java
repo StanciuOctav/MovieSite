@@ -4,8 +4,11 @@ import com.movie.moviesite.model.Director;
 import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.Collection;
 
 @RestController
@@ -19,25 +22,32 @@ public class DirectorController {
     }
 
     @GetMapping
-    public Collection<Director> getAllDirectors() {
-        return this.directorService.getAllDirectors();
+    public ResponseEntity<Collection<Director>> getAllDirectors() {
+        Collection<Director> directors = this.directorService.getAllDirectors();
+        return ResponseEntity.ok().body(directors);
     }
 
-    @GetMapping("/directed")
-    public Collection<Director> getDirectedMovies(@RequestParam("id") Long id) {
-        return this.directorService.getDirectedMovies(id);
+    @GetMapping("/{directorId}")
+    public ResponseEntity<Director> getDirectorById(@PathVariable Long directorId) {
+        Director director = this.directorService.getDirectorById(directorId);
+        return ResponseEntity.ok(director);
     }
 
     @PostMapping
-    public String saveDirector(@RequestBody Director director) {
+    public ResponseEntity<Director> saveDirector(@RequestBody Director director) {
         this.directorService.saveDirector(director);
-        return "DIRECTOR SAVED";
+        return ResponseEntity.created(URI.create("/directors")).body(director);
     }
 
-    @PatchMapping("/{dirId}")
-    public String updateDirector(@RequestBody Director director, @PathVariable Long dirId) {
-        this.directorService.updateDirector(director, dirId);
-        return "DIRECTOR UPDATED";
+    @PatchMapping("/{directorId}")
+    public ResponseEntity<Director> updateDirectorById(@RequestBody Director director, @PathVariable Long directorId) {
+        this.directorService.updateDirectorById(director, directorId);
+        return ResponseEntity.ok(director);
     }
 
+    @DeleteMapping("/{directorId}")
+    public ResponseEntity<String> deleteDirectorById(@PathVariable Long directorId) {
+        this.directorService.deleteDirectorById(directorId);
+        return ResponseEntity.ok("Deleted director with the id " + directorId + "\n");
+    }
 }

@@ -33,9 +33,9 @@ public class ActorService {
         this.actorRepository.save(actor);
     }
 
-    public void updateActor(Actor actor, Long actorId) {
+    public void updateActorById(Actor actor, Long actorId) {
         Optional<Actor> foundActor = this.actorRepository.findById(actorId);
-        if(foundActor.isPresent()) {
+        if (foundActor.isPresent()) {
             foundActor.get().setName(actor.getName());
             foundActor.get().setAge(actor.getAge());
             foundActor.get().setBornIn(actor.getBornIn());
@@ -44,7 +44,7 @@ public class ActorService {
         }
     }
 
-    public void deleteActor(Long actorId) {
+    public void deleteActorById(Long actorId) {
         actorRepository.deleteById(actorId);
     }
 }

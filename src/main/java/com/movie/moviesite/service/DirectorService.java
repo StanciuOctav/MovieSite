@@ -1,13 +1,15 @@
 package com.movie.moviesite.service;
 
 import com.movie.moviesite.model.Director;
-import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.repository.DirectorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.Optional;
 
+@Transactional
 @Service
 public class DirectorService {
 
@@ -21,22 +23,29 @@ public class DirectorService {
     public Collection<Director> getAllDirectors() {
         return this.directorRepository.getAllDirectors();
     }
-    public Collection<Director> getDirectedMovies(Long id) {
-        return this.directorRepository.getDirectedMovies(id);
+
+    public Director getDirectorById(Long directorId) {
+        return this.directorRepository.getDirectorById(directorId);
     }
 
     public void saveDirector(Director director) {
         this.directorRepository.save(director);
     }
 
-    public void updateDirector(Director director, Long dirId) {
-        Director oldDir = this.directorRepository.getById(dirId);
-        oldDir.setId(director.getId());
-        oldDir.setName(director.getName());
-        oldDir.setAge(director.getAge());
-        oldDir.setBornIn(director.getBornIn());
-        oldDir.setNetWorth(director.getNetWorth());
-        this.directorRepository.save(oldDir);
+    public void updateDirectorById(Director director, Long directorId) {
+        Optional<Director> foundDir = this.directorRepository.findById(directorId);
+        if (foundDir.isPresent()) {
+            foundDir.get().setId(director.getId());
+            foundDir.get().setName(director.getName());
+            foundDir.get().setAge(director.getAge());
+            foundDir.get().setBornIn(director.getBornIn());
+            foundDir.get().setNetWorth(director.getNetWorth());
+            this.directorRepository.save(foundDir.get());
+        }
+    }
+
+    public void deleteDirectorById(Long directorId) {
+        this.directorRepository.deleteById(directorId);
     }
 
 }
