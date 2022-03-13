@@ -1,4 +1,4 @@
-package com.movie.moviesite.validate;
+package com.movie.moviesite.validator;
 
 import java.util.Collection;
 

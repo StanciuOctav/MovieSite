@@ -2,7 +2,7 @@ package com.movie.moviesite.service;
 
 import com.movie.moviesite.model.Actor;
 import com.movie.moviesite.repository.ActorRepository;
-import com.movie.moviesite.validate.ValidateRepo;
+import com.movie.moviesite.validator.ValidateRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

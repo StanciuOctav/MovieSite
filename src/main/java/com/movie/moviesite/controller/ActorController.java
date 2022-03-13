@@ -3,10 +3,10 @@ package com.movie.moviesite.controller;
 import com.movie.moviesite.model.Actor;
 import com.movie.moviesite.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.Collection;
 
@@ -32,13 +32,13 @@ public class ActorController {
     }
 
     @PostMapping
-    public ResponseEntity<Actor> saveActor(@RequestBody Actor actor) {
+    public ResponseEntity<Actor> saveActor(@Valid @RequestBody Actor actor) {
         this.actorService.saveActor(actor);
         return ResponseEntity.created(URI.create("/actors")).body(actor);
     }
 
     @PatchMapping("/{actorId}")
-    public ResponseEntity<Actor> updateActorById(@RequestBody Actor actor, @PathVariable Long actorId) {
+    public ResponseEntity<Actor> updateActorById(@Valid @RequestBody Actor actor, @PathVariable Long actorId) {
         this.actorService.updateActorById(actor, actorId);
         return ResponseEntity.ok(actor);
     }

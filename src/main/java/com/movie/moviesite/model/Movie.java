@@ -1,12 +1,14 @@
 package com.movie.moviesite.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.movie.moviesite.annotations.ReleaseYearAnnotation;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
+import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 import java.util.Collection;
 
 @Node("MOVIE")
@@ -19,9 +21,14 @@ public class Movie {
     @Id
     @GeneratedValue
     private Long id;
+    @NotBlank(message = "Movie's name cannot be null or blank")
     private String name;
+    @NotBlank(message = "Movie's genre cannot be null or blank")
     private String genre;
+    @ReleaseYearAnnotation
     private Integer releaseYear;
+
+    public final int date = LocalDate.now().getYear();
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private Director director;

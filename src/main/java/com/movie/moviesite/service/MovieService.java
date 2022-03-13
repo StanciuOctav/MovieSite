@@ -1,6 +1,5 @@
 package com.movie.moviesite.service;
 
-import com.movie.moviesite.model.Director;
 import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.repository.MovieRepostitory;
 import org.springframework.beans.factory.annotation.Autowired;

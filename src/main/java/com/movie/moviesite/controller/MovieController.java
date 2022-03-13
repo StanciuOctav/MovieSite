@@ -2,12 +2,11 @@ package com.movie.moviesite.controller;
 
 import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.service.MovieService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import javax.validation.Valid;
 import java.util.Collection;
 
 @RestController
@@ -31,13 +30,13 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
+    public ResponseEntity<Movie> saveMovie(@Valid @RequestBody Movie movie) {
         this.movieService.saveMovie(movie);
         return ResponseEntity.ok(movie);
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> updateMovieById(@RequestBody Movie movie, @PathVariable Long movieId) {
+    public ResponseEntity<Movie> updateMovieById(@Valid @RequestBody Movie movie, @PathVariable Long movieId) {
         this.movieService.updateMovieById(movie, movieId);
         return ResponseEntity.ok(movie);
     }

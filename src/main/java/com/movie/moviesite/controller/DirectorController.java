@@ -1,13 +1,12 @@
 package com.movie.moviesite.controller;
 
 import com.movie.moviesite.model.Director;
-import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.service.DirectorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.Collection;
 
@@ -34,13 +33,13 @@ public class DirectorController {
     }
 
     @PostMapping
-    public ResponseEntity<Director> saveDirector(@RequestBody Director director) {
+    public ResponseEntity<Director> saveDirector(@Valid @RequestBody Director director) {
         this.directorService.saveDirector(director);
         return ResponseEntity.created(URI.create("/directors")).body(director);
     }
 
     @PatchMapping("/{directorId}")
-    public ResponseEntity<Director> updateDirectorById(@RequestBody Director director, @PathVariable Long directorId) {
+    public ResponseEntity<Director> updateDirectorById(@Valid @RequestBody Director director, @PathVariable Long directorId) {
         this.directorService.updateDirectorById(director, directorId);
         return ResponseEntity.ok(director);
     }
