@@ -6,8 +6,15 @@ import org.springframework.data.neo4j.repository.query.Query;
 
 import java.util.Collection;
 
+/**
+ * Using custom @Query and dynamic @Query so it doesn't have a recursive call (infinite loop to populate lists)
+ */
+
 public interface ActorRepository extends Neo4jRepository<Actor, Long> {
 
     @Query("MATCH (a:ACTOR)-[ai:ACTED_IN]->(m:MOVIE) RETURN a, collect(ai), collect(m)")
     Collection<Actor> getAllActors();
+
+    @Query("MATCH (a:ACTOR)-[ai:ACTED_IN]->(m:MOVIE) WHERE ID(a) = $actorId RETURN a, collect(ai), collect(m)")
+    Actor getActorById(Long actorId);
 }

@@ -2,12 +2,15 @@ package com.movie.moviesite.service;
 
 import com.movie.moviesite.model.Actor;
 import com.movie.moviesite.repository.ActorRepository;
+import com.movie.moviesite.validate.ValidateRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
 import java.util.Optional;
 
+@Transactional
 @Service
 public class ActorService {
 
@@ -18,12 +21,12 @@ public class ActorService {
     }
 
     public Collection<Actor> getAllActors() {
-        return this.actorRepository.getAllActors();
+        Collection<Actor> actors = this.actorRepository.getAllActors();
+        return ValidateRepo.isNotEmptyOrNull(actors) ? actors : null;
     }
 
     public Actor getActorById(Long actorId) {
-        Optional<Actor> actor = this.actorRepository.findById(actorId);
-        return actor.orElseGet(Actor::new);
+        return this.actorRepository.getActorById(actorId);
     }
 
     public void saveActor(Actor actor) {

@@ -1,5 +1,6 @@
 package com.movie.moviesite.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
@@ -13,7 +14,6 @@ import java.util.Collection;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class Movie {
     @Id
     @GeneratedValue

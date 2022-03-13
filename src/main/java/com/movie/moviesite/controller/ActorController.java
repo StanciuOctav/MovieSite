@@ -3,6 +3,8 @@ package com.movie.moviesite.controller;
 import com.movie.moviesite.model.Actor;
 import com.movie.moviesite.service.ActorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -24,25 +26,25 @@ public class ActorController {
     }
 
     @GetMapping("/{actorId}")
-    public Actor getActoryById(@PathVariable Long actorId) {
-        return this.actorService.getActorById(actorId);
+    public ResponseEntity<Actor> getActorById(@PathVariable Long actorId) {
+        return new ResponseEntity<>(this.actorService.getActorById(actorId), HttpStatus.FOUND);
     }
 
     @PostMapping
-    public String saveActor(@RequestBody Actor actor) {
+    public ResponseEntity<Actor> saveActor(@RequestBody Actor actor) {
         this.actorService.saveActor(actor);
-        return actor.toString();
+        return new ResponseEntity<>(actor, HttpStatus.CREATED);
     }
 
     @PatchMapping ("/{actorId}")
-    public String updateActor(@RequestBody Actor actor, @PathVariable Long actorId) {
+    public ResponseEntity<Actor> updateActor(@RequestBody Actor actor, @PathVariable Long actorId) {
         this.actorService.updateActor(actor, actorId);
-        return actor.toString();
+        return new ResponseEntity<>(actor, HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/{actorId}")
-    public String deleteActor(@PathVariable Long actorId) {
+    public ResponseEntity<Long> deleteActor(@PathVariable Long actorId) {
         this.actorService.deleteActor(actorId);
-        return "ACTOR DELETED";
+        return new ResponseEntity<>(actorId, HttpStatus.OK);
     }
 }
