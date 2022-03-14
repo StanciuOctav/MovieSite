@@ -30,12 +30,9 @@ public class UserController {
         return ResponseEntity.ok(this.userService.getUserById(userId));
     }
 
-    // TODO: Check by email and password if the user is already inserted;
-    //  If not, also create its watchlist
     @PostMapping
-    public ResponseEntity<User> saveUser(@Valid @RequestBody User user) {
-        this.userService.saveUser(user);
-        return ResponseEntity.ok(user);
+    public ResponseEntity<?> saveUser(@Valid @RequestBody User user) {
+        return this.userService.saveUser(user);
     }
 
     @PatchMapping("/{userId}")

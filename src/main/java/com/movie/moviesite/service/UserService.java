@@ -1,8 +1,8 @@
 package com.movie.moviesite.service;
 
-import com.movie.moviesite.model.Actor;
 import com.movie.moviesite.model.User;
 import com.movie.moviesite.repository.UserRepository;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,8 +27,14 @@ public class UserService {
         return this.userRepository.getUserById(userId);
     }
 
-    public void saveUser(User user) {
-        this.userRepository.save(user);
+    public ResponseEntity<?> saveUser(User user) {
+        User oldUser = this.userRepository.checkUser(user.getEmail(), user.getPassword());
+        if (oldUser == null) {
+            this.userRepository.save(user);
+            return ResponseEntity.ok(user);
+        } else {
+            return ResponseEntity.status(409).body("There already is an user with the same email or password");
+        }
     }
 
     public void updateUserById(User user, Long userId) {

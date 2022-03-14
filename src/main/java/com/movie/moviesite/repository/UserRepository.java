@@ -16,4 +16,7 @@ public interface UserRepository extends Neo4jRepository<User, Long> {
 
     @Query("MATCH (u:USER)-[r:REVIEWED]->(m:MOVIE) WHERE ID(u) = $userId RETURN u, collect(r), collect(m)")
     User getUserById(Long userId);
+
+    @Query("MATCH (u:USER) WHERE u.email = $email OR u.password = $password RETURN u")
+    User checkUser(String email, String password);
 }
