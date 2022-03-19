@@ -27,4 +27,7 @@ public interface UserRepository extends Neo4jRepository<User, Long> {
     @Query("MATCH (u:USER {name: $username}), (m:MOVIE {name: $movieName})" +
             "CREATE (u)-[:REVIEWED {content: $reviewContent}]->(m)")
     void addReview(String username, String movieName, String reviewContent);
+
+    @Query("MATCH (u:USER {name: $username})-[r:REVIEWED]->(m:MOVIE {name: $movieName}) SET r.content = $reviewContent")
+    void updateReview(String username, String movieName, String reviewContent);
 }

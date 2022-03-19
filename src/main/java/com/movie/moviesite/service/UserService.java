@@ -26,8 +26,8 @@ public class UserService {
             this.userRepository.addReview(username, movieName, content);
             return ResponseEntity.ok("Added the review for the movie " + movieName + " with the content " + content);
         } else {
-            Reviewed r = (Reviewed) u.getReviewedMovies().toArray()[0];
-            return ResponseEntity.ok("Already reviewed this movie with the following review: " + r.getContent());
+            this.userRepository.updateReview(username, movieName, content);
+            return ResponseEntity.ok("Updated the review content: " + content);
         }
     }
 
