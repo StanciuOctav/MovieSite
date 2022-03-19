@@ -18,9 +18,14 @@ public class UserController {
         this.userService = userService;
     }
 
+    @GetMapping("/addToWatchlist")
+    public ResponseEntity<String> addMovieToWatchlist(@RequestParam("movie") String movieName) {
+        return this.userService.addMovieToWatchlist(movieName);
+    }
+
     @GetMapping("/addReview")
     public ResponseEntity<String> userAddMovieReview(@RequestParam("user") String username, @RequestParam("movie") String movieName, @RequestParam("content") String reviewContent) {
-        return this.userService.getReview(username, movieName, reviewContent);
+        return this.userService.userAddMovieReview(username, movieName, reviewContent);
     }
 
     /**

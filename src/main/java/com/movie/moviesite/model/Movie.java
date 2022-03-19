@@ -38,7 +38,4 @@ public class Movie {
 
     @Relationship(type = "REVIEWED", direction = Relationship.Direction.INCOMING)
     private List<ReviewedByUser> reviewedByUsers;
-
-/*    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.INCOMING)
-    private Collection<User> watchListUsers;*/
 }

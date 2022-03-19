@@ -1,5 +1,6 @@
 package com.movie.moviesite.service;
 
+import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.model.User;
 import com.movie.moviesite.relationship.Reviewed;
 import com.movie.moviesite.repository.UserRepository;
@@ -20,7 +21,17 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public ResponseEntity<String> getReview(String username, String movieName, String content) {
+    public ResponseEntity<String> addMovieToWatchlist(String movieName) {
+        User user = this.userRepository.checkMovieInWatchlist(movieName);
+        if (user == null) {
+            this.userRepository.addMovieToWatchlist(movieName);
+            return ResponseEntity.ok("Movie added to Watchlist");
+        } else {
+            return ResponseEntity.ok("Movie is already in watchlist");
+        }
+    }
+
+    public ResponseEntity<String> userAddMovieReview(String username, String movieName, String content) {
         User u = this.userRepository.getReview(username, movieName);
         if (u == null) {
             this.userRepository.addReview(username, movieName, content);

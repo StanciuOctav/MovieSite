@@ -31,7 +31,7 @@ public class User {
     @Relationship(type = "REVIEWED", direction = Relationship.Direction.OUTGOING)
     private Collection<Reviewed> reviewedMovies;
 
-    /*@Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.OUTGOING)
-    private Collection<Movie> watchlistMovies;*/
+    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.OUTGOING)
+    private Collection<Movie> watchlistMovies;
 
 }
