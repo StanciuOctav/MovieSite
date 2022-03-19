@@ -11,7 +11,7 @@ import java.net.URI;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/actors")
+@RequestMapping("/api/actors")
 public class ActorController {
 
     private final ActorService actorService;

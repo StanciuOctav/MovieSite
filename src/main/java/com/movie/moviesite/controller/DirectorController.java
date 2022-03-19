@@ -11,7 +11,7 @@ import java.net.URI;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/directors")
+@RequestMapping("/api/directors")
 public class DirectorController {
     private final DirectorService directorService;
 

@@ -1,7 +1,8 @@
 package com.movie.moviesite.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.movie.moviesite.annotations.ReleaseYearAnnotation;
+import com.movie.moviesite.relationship.Reviewed;
+import com.movie.moviesite.relationship.ReviewedByUser;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Id;
@@ -9,8 +10,8 @@ import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
 import java.util.Collection;
+import java.util.List;
 
 @Node("MOVIE")
 @Getter
@@ -35,13 +36,9 @@ public class Movie {
     @Relationship(type = "ACTED_IN", direction = Relationship.Direction.INCOMING)
     private Collection<Actor> actedInActors;
 
-    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.INCOMING)
-    private Collection<User> watchListUsers;
-
-    /**
-     * For now, not a reason to have a User object in Movie
-     */
-    @JsonIgnore
     @Relationship(type = "REVIEWED", direction = Relationship.Direction.INCOMING)
-    private User reviewer;
+    private List<ReviewedByUser> reviewedByUsers;
+
+/*    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.INCOMING)
+    private Collection<User> watchListUsers;*/
 }

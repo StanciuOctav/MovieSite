@@ -6,6 +6,7 @@ import org.springframework.data.neo4j.repository.query.Query;
 
 import java.util.Collection;
 
+// TODO: update these queries so that they execute on the logged in User
 public interface UserRepository extends Neo4jRepository<User, Long> {
 
     @Query("MATCH (u:USER), (m1:MOVIE), (m2:MOVIE)" +
@@ -19,4 +20,11 @@ public interface UserRepository extends Neo4jRepository<User, Long> {
 
     @Query("MATCH (u:USER) WHERE u.email = $email OR u.password = $password RETURN u")
     User checkUser(String email, String password);
+
+    @Query("MATCH (u:USER {name: $username})-[r:REVIEWED]->(m:MOVIE {name: $movieName}) RETURN u, collect(r), collect(m)")
+    User getReview(String username, String movieName);
+
+    @Query("MATCH (u:USER {name: $username}), (m:MOVIE {name: $movieName})" +
+            "CREATE (u)-[:REVIEWED {content: $reviewContent}]->(m)")
+    void addReview(String username, String movieName, String reviewContent);
 }

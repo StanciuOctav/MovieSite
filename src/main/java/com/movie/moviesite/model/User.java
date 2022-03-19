@@ -1,6 +1,7 @@
 package com.movie.moviesite.model;
 
 import com.movie.moviesite.annotations.AgeAnnotaion;
+import com.movie.moviesite.relationship.Reviewed;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.*;
 
@@ -27,9 +28,10 @@ public class User {
     @NotBlank(message = "The User's password cannot be null or empty")
     private String password; // TODO: create an annotation that verifies password for more details
 
-    @Relationship(type = "REVIEWED")
+    @Relationship(type = "REVIEWED", direction = Relationship.Direction.OUTGOING)
     private Collection<Reviewed> reviewedMovies;
-    @Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.OUTGOING)
-    private Collection<Movie> watchlistMovies;
+
+    /*@Relationship(type = "IN_WATCHLIST", direction = Relationship.Direction.OUTGOING)
+    private Collection<Movie> watchlistMovies;*/
 
 }

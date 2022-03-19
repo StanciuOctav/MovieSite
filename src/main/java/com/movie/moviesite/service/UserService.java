@@ -1,6 +1,7 @@
 package com.movie.moviesite.service;
 
 import com.movie.moviesite.model.User;
+import com.movie.moviesite.relationship.Reviewed;
 import com.movie.moviesite.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,20 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public ResponseEntity<String> getReview(String username, String movieName, String content) {
+        User u = this.userRepository.getReview(username, movieName);
+        if (u == null) {
+            this.userRepository.addReview(username, movieName, content);
+            return ResponseEntity.ok("Added the review for the movie " + movieName + " with the content " + content);
+        } else {
+            Reviewed r = (Reviewed) u.getReviewedMovies().toArray()[0];
+            return ResponseEntity.ok("Already reviewed this movie with the following review: " + r.getContent());
+        }
+    }
+
+    /**
+     * CRUD OPERATIONS
+     */
     public Collection<User> getAllUsers() {
         return this.userRepository.getAllUsers();
     }

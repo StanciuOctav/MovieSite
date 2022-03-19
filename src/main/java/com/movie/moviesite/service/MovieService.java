@@ -21,6 +21,10 @@ public class MovieService {
         return this.movieRepostitory.getAllMovies();
     }
 
+    public Collection<Movie> getReviewedMovies() {
+        return this.movieRepostitory.getReviewedMovies();
+    }
+
     public Movie getMovieById(Long movieId) {
         return this.movieRepostitory.getMovieById(movieId);
     }

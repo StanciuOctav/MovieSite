@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserService userService;
@@ -18,8 +18,14 @@ public class UserController {
         this.userService = userService;
     }
 
-    // TODO: being able to add movies to its watchlist
-    // TODO: being able to add a review to a movie or update its review (do it with queryString in url @RequestParam
+    @GetMapping("/addReview")
+    public ResponseEntity<String> userAddMovieReview(@RequestParam("user") String username, @RequestParam("movie") String movieName, @RequestParam("content") String reviewContent) {
+        return this.userService.getReview(username, movieName, reviewContent);
+    }
+
+    /**
+     * CRUD OPEARTIONS
+     */
     @GetMapping
     public ResponseEntity<Collection<User>> getAllUsers() {
         return ResponseEntity.ok(this.userService.getAllUsers());

@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/api/movies")
 public class MovieController {
     private final MovieService movieService;
 
@@ -22,6 +22,11 @@ public class MovieController {
     @GetMapping
     public ResponseEntity<Collection<Movie>> getAllMovies() {
         return ResponseEntity.ok(this.movieService.getAllMovies());
+    }
+
+    @GetMapping("/reviewed")
+    public ResponseEntity<Collection<Movie>> getReviewedMovies() {
+        return ResponseEntity.ok(this.movieService.getReviewedMovies());
     }
 
     @GetMapping("/{movieId}")
