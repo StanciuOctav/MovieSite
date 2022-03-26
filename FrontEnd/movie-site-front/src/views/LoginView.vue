@@ -50,17 +50,9 @@ export default {
     }
   },
   methods: {
-    /* async login() {
-      try {
-        var result = await axios.post("http://localhost:8081/admin/login", { email: this.email, password: this.password });
-        this.$router.push({ name: 'home' });
-      } catch (e) {
-        alert("Credentiale incorecte!");
-      }
-    } */
-
     login() {
-      axios.get("http://localhost:8080/api/users/" + this.email, {})
+      let request = `userEmail=${this.email}&userPassword=${this.password}`
+      axios.get("http://localhost:8080/api/users/user?" + request)
           .then(response => {
             if (response.data === "") {
               if (confirm("User doesn't exist. Want to register?")) {

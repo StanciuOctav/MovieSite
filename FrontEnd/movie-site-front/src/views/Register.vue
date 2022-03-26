@@ -48,6 +48,14 @@
     >
       Register
     </v-btn>
+
+    <v-btn
+        color="primary"
+        class="mr-4"
+        @click="redirectToLogin"
+    >
+      Back to Login
+    </v-btn>
   </v-form>
 </template>
 
@@ -71,11 +79,28 @@ export default {
     }
   },
   methods: {
+    redirectToLogin() {
+      window.location.href = "http://localhost:8082/"
+    },
     register() {
       if (this.canRegister()) {
-        console.log("U can register")
+        const user = {
+          age: this.age,
+          email: this.email,
+          name: this.name,
+          password: this.password
+        }
+        axios.post("http://localhost:8080/api/users", user)
+            .then(response => {
+              alert("Registration complete")
+              window.location.href = "http://localhost:8082/"
+            })
+            .catch(error => {
+              alert("User with the same email or password already exists")
+              console.log(error)
+            })
       } else {
-        console.log("WRONG")
+        alert("Please complete all the fields correctly!")
       }
     },
     canRegister() {

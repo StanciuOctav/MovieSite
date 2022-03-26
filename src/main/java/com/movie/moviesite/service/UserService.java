@@ -53,6 +53,10 @@ public class UserService {
         return this.userRepository.getUserByEmail(userEmail);
     }
 
+    public User checkUser(String email, String password) {
+        return this.userRepository.checkUser(email, password);
+    }
+
     public ResponseEntity<?> saveUser(User user) {
         User oldUser = this.userRepository.checkUser(user.getEmail(), user.getPassword());
         if (oldUser == null) {

@@ -37,9 +37,9 @@ public class UserController {
         return ResponseEntity.ok(this.userService.getAllUsers());
     }
 
-    @GetMapping("/{userEmail}")
-    public ResponseEntity<User> getUserById(@PathVariable String userEmail) {
-        return ResponseEntity.ok(this.userService.getUserByEmail(userEmail));
+    @GetMapping("/user")
+    public ResponseEntity<User> getUserLogin(@RequestParam("userEmail") String email, @RequestParam("userPassword") String password) {
+        return ResponseEntity.ok(this.userService.checkUser(email, password));
     }
 
     @PostMapping
