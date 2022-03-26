@@ -44,6 +44,8 @@ export default {
   name: 'Login',
   data() {
     return {
+      bctx: "http://localhost:8080",
+      fctx: window.location.protocol + "//" + window.location.host,
       email: "",
       password: "",
       info: null
@@ -51,15 +53,15 @@ export default {
   },
   methods: {
     login() {
-      let request = `userEmail=${this.email}&userPassword=${this.password}`
-      axios.get("http://localhost:8080/api/users/user?" + request)
+      let request = `/api/users/user?userEmail=${this.email}&userPassword=${this.password}`
+      axios.get(this.bctx + request)
           .then(response => {
             if (response.data === "") {
               if (confirm("User doesn't exist. Want to register?")) {
                 this.$router.push({name: 'register'})
               }
             } else {
-              console.log("User exists. Redirecting to home page")
+              window.location.href = this.fctx + "/home"
             }
           })
           .catch(error => (console.log(error)))

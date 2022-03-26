@@ -66,6 +66,8 @@ export default {
   name: 'Register',
   data() {
     return {
+      bctx: "http://localhost:8080",
+      fctx: window.location.protocol + "//" + window.location.host,
       name: "",
       age: "",
       email: "",
@@ -80,7 +82,7 @@ export default {
   },
   methods: {
     redirectToLogin() {
-      window.location.href = "http://localhost:8082/"
+      window.location.href = this.fctx
     },
     register() {
       if (this.canRegister()) {
@@ -90,10 +92,10 @@ export default {
           name: this.name,
           password: this.password
         }
-        axios.post("http://localhost:8080/api/users", user)
+        axios.post(this.bctx + "/api/users", user)
             .then(response => {
               alert("Registration complete")
-              window.location.href = "http://localhost:8082/"
+              window.location.href = this.fctx
             })
             .catch(error => {
               alert("User with the same email or password already exists")
