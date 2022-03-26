@@ -13,6 +13,7 @@ import java.util.Collection;
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
 @NoArgsConstructor
 public class User {
 

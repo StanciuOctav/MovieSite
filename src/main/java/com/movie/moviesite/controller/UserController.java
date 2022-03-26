@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.Collection;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -36,9 +37,9 @@ public class UserController {
         return ResponseEntity.ok(this.userService.getAllUsers());
     }
 
-    @GetMapping("/{userId}")
-    public ResponseEntity<User> getUserById(@PathVariable Long userId) {
-        return ResponseEntity.ok(this.userService.getUserById(userId));
+    @GetMapping("/{userEmail}")
+    public ResponseEntity<User> getUserById(@PathVariable String userEmail) {
+        return ResponseEntity.ok(this.userService.getUserByEmail(userEmail));
     }
 
     @PostMapping

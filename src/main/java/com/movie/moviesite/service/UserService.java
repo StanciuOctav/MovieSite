@@ -49,8 +49,8 @@ public class UserService {
         return this.userRepository.getAllUsers();
     }
 
-    public User getUserById(Long userId) {
-        return this.userRepository.getUserById(userId);
+    public User getUserByEmail(String userEmail) {
+        return this.userRepository.getUserByEmail(userEmail);
     }
 
     public ResponseEntity<?> saveUser(User user) {
