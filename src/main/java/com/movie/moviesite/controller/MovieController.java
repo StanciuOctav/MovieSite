@@ -25,32 +25,24 @@ public class MovieController {
         return ResponseEntity.ok(this.movieService.getAllMovies());
     }
 
-    @GetMapping("/reviewed")
-    public ResponseEntity<Collection<Movie>> getReviewedMovies() {
-        return ResponseEntity.ok(this.movieService.getReviewedMovies());
-    }
-
     @GetMapping("/{movieId}")
     public ResponseEntity<Movie> getMovieById(@PathVariable Long movieId) {
         return ResponseEntity.ok(this.movieService.getMovieById(movieId));
     }
 
     @PostMapping
-    public ResponseEntity<Movie> saveMovie(@Valid @RequestBody Movie movie) {
-        this.movieService.saveMovie(movie);
-        return ResponseEntity.ok(movie);
+    public ResponseEntity<?> saveMovie(@RequestBody Movie movie, @RequestParam("director") String directedBy) {
+        return this.movieService.saveMovie(movie, directedBy);
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> updateMovieById(@Valid @RequestBody Movie movie, @PathVariable Long movieId) {
-        this.movieService.updateMovieById(movie, movieId);
-        return ResponseEntity.ok(movie);
+    public ResponseEntity<?> updateMovieById(@RequestBody Movie movie, @PathVariable Long movieId) {
+        return this.movieService.updateMovieById(movie, movieId);
     }
 
     @DeleteMapping("/{movieId}")
-    public ResponseEntity<String> deleteMovieById(@PathVariable Long movieId) {
-        this.movieService.deleteMovieById(movieId);
-        return ResponseEntity.ok("Movie with the id " + movieId + " was deleted");
+    public ResponseEntity<?> deleteMovieById(@PathVariable Long movieId) {
+        return this.movieService.deleteMovieById(movieId);
     }
 
 }

@@ -49,10 +49,6 @@ public class UserService {
         return this.userRepository.getAllUsers();
     }
 
-    public User getUserByEmail(String userEmail) {
-        return this.userRepository.getUserByEmail(userEmail);
-    }
-
     public User checkUser(String email, String password) {
         return this.userRepository.checkUser(email, password);
     }

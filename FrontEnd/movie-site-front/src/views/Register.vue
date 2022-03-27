@@ -1,58 +1,39 @@
 <template>
-  <v-form
-      ref="form"
-      class="ml-6 mr-6"
-  >
-    <v-text-field
-        v-model="name"
-        label="Name"
-        required
-    ></v-text-field>
-    <div v-if="invalidFields.name" style="color: red;">
-      <p>Name cannot be empty</p>
-    </div>
+  <v-form v-model="valid" ref="form" class="ml-6 mr-6">
+    <v-text-field v-model="name" :rules="nameRules" label="Name" required>
+    </v-text-field>
 
     <v-text-field
         v-model="age"
+        :rules="ageRules"
         label="Age"
         required
     ></v-text-field>
-    <div v-if="invalidFields.age" style="color: red;">
-      <p>Age field cannot be empty and must be over or equal to 18</p>
-    </div>
 
     <v-text-field
         v-model="email"
+        :rules="emailRules"
         label="Email"
         type="email"
         required
     ></v-text-field>
-    <div v-if="invalidFields.email" style="color: red;">
-      <p>Email field cannot be empty</p>
-    </div>
 
     <v-text-field
         v-model="password"
+        :rules="nameRules"
         label="Password"
         type="password"
         required
     ></v-text-field>
-    <div v-if="invalidFields.password" style="color: red;">
-      <p>Password cannot be empty</p>
-    </div>
 
-    <v-btn
-        color="success"
-        class="mr-4"
-        @click="register"
-    >
+    <v-btn :disabled="!valid" color="success" class="mr-4" @click="register">
       Register
     </v-btn>
 
     <v-btn
         color="primary"
         class="mr-4"
-        @click="redirectToLogin"
+        @click="$router.push({ name: 'login' })"
     >
       Back to Login
     </v-btn>
@@ -63,58 +44,57 @@
 import axios from "axios";
 
 export default {
-  name: 'Register',
+  name: "Register",
   data() {
     return {
       bctx: "http://localhost:8080",
-      fctx: window.location.protocol + "//" + window.location.host,
       name: "",
       age: "",
       email: "",
       password: "",
-      invalidFields: {
-        name: false,
-        age: false,
-        email: false,
-        password: false
-      }
-    }
+      valid: true,
+      nameRules: [(v) => !!v || "This field is mandatory"],
+      ageRules: [
+        (v) => !!v || "This field is mandatory",
+        (v) =>
+            (v && v >= 18 && v <= 90) ||
+            "You must have between 18 and 90 years old",
+      ],
+      emailRules: [
+        (v) => !!v || "E-mail is required",
+        (v) =>
+            /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()\\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+                v
+            ) || "E-mail must be valid",
+      ],
+    };
   },
   methods: {
-    redirectToLogin() {
-      window.location.href = this.fctx
+    validate() {
+      return this.$refs.form.validate();
     },
     register() {
-      if (this.canRegister()) {
+      if (this.validate()) {
         const user = {
           age: this.age,
           email: this.email,
           name: this.name,
-          password: this.password
-        }
-        axios.post(this.bctx + "/api/users", user)
-            .then(response => {
-              alert("Registration complete")
-              window.location.href = this.fctx
+          password: this.password,
+        };
+        axios
+            .post(this.bctx + "/api/users", user)
+            .then((response) => {
+              alert("Registration complete");
+              this.$router.push({name: "login"});
             })
-            .catch(error => {
-              alert("User with the same email or password already exists")
-              console.log(error)
-            })
+            .catch((error) => {
+              alert("User with the same email or password already exists");
+              console.log(error);
+            });
       } else {
-        alert("Please complete all the fields correctly!")
+        alert("Please complete all the fields correctly!");
       }
     },
-    canRegister() {
-      this.checkEmptyFields()
-      return !this.invalidFields.name && !this.invalidFields.age && !this.invalidFields.email && !this.invalidFields.password
-    },
-    checkEmptyFields() {
-      this.name === "" ? this.invalidFields.name = true : this.invalidFields.name = false
-      this.age === "" || this.age < 18 ? this.invalidFields.age = true : this.invalidFields.age = false
-      this.email === "" ? this.invalidFields.email = true : this.invalidFields.email = false
-      this.password === "" ? this.invalidFields.password = true : this.invalidFields.password = false
-    }
-  }
-}
+  },
+};
 </script>

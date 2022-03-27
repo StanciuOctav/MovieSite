@@ -1,7 +1,5 @@
 package com.movie.moviesite.model;
 
-import com.movie.moviesite.annotations.ReleaseYearAnnotation;
-import com.movie.moviesite.relationship.Reviewed;
 import com.movie.moviesite.relationship.ReviewedByUser;
 import lombok.*;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
@@ -9,7 +7,6 @@ import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
-import javax.validation.constraints.NotBlank;
 import java.util.Collection;
 import java.util.List;
 
@@ -23,11 +20,8 @@ public class Movie {
     @Id
     @GeneratedValue
     private Long id;
-    @NotBlank(message = "Movie's name cannot be null or blank")
     private String name;
-    @NotBlank(message = "Movie's genre cannot be null or blank")
     private String genre;
-    @ReleaseYearAnnotation
     private Integer releaseYear;
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
