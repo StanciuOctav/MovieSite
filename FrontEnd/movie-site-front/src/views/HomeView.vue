@@ -1,10 +1,5 @@
 <template>
   <div>
-    <v-btn @click="addNewMovie" class="my-4 mx-4" color="success" rounded>
-      <v-icon left> mdi-pencil</v-icon>
-      Add new Movie
-    </v-btn>
-
     <ul>
       <li class="box" v-for="movie in renderMovies" :key="movie.id">
         <p>Genre: {{ movie.genre }}</p>
@@ -56,9 +51,6 @@ export default {
   },
   // basic methods
   methods: {
-    addNewMovie: function () {
-      this.$router.push({name: "addMovie"});
-    },
     deleteMovie: function (movieId) {
       axios
           .delete(this.bctx + "/api/movies/" + movieId)

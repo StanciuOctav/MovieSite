@@ -37,9 +37,10 @@ public class UserController {
         return ResponseEntity.ok(this.userService.getAllUsers());
     }
 
-    @GetMapping("/user")
-    public ResponseEntity<User> getUserLogin(@RequestParam("userEmail") String email, @RequestParam("userPassword") String password) {
-        return ResponseEntity.ok(this.userService.checkUser(email, password));
+    @PostMapping("/user")
+    public ResponseEntity<?> userLogin(@RequestBody User user) {
+        System.out.println(user);
+        return this.userService.checkUserLogin(user);
     }
 
     @PostMapping

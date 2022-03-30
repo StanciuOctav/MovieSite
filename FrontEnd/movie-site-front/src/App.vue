@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-        app
-        color="primary"
-        dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
             alt="Vuetify Logo"
@@ -15,10 +11,12 @@
             width="40"
         />
 
-        <h1>
-          Movie Site
-        </h1>
+        <h1>Movie Site</h1>
       </div>
+      <v-btn @click="addNewMovie" class="my-4 mx-4" color="success" rounded>
+        <v-icon left> mdi-pencil</v-icon>
+        Add new Movie
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -28,12 +26,16 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //
   }),
+  methods: {
+    addNewMovie: function () {
+      this.$router.push({name: "addMovie"});
+    },
+  },
 };
 </script>

@@ -1,10 +1,5 @@
 <template>
-  <v-form
-      ref="form"
-      class="ml-6 mr-6"
-      v-model="valid"
-      lazy-validation
-  >
+  <v-form ref="form" class="ml-6 mr-6" v-model="valid" lazy-validation>
     <v-text-field
         v-model="email"
         :rules="emailRules"
@@ -20,12 +15,7 @@
         required
     ></v-text-field>
 
-    <v-btn
-        :disabled="!valid"
-        color="success"
-        class="mr-10"
-        @click="login"
-    >
+    <v-btn :disabled="!valid" color="success" class="mr-10" @click="login">
       Login
     </v-btn>
 
@@ -43,7 +33,7 @@
 import axios from "axios";
 
 export default {
-  name: 'Login',
+  name: "Login",
   data() {
     return {
       bctx: "http://localhost:8080",
@@ -51,34 +41,42 @@ export default {
       email: "",
       password: "",
       emailRules: [
-        v => !!v || 'E-mail is required',
-        v => /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()\\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) || 'E-mail must be valid',
+        (v) => !!v || "E-mail is required",
+        (v) =>
+            /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()\\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+                v
+            ) || "E-mail must be valid",
       ],
-      passwordRules: [
-        v => !!v || "Password is required"
-      ]
-    }
+      passwordRules: [(v) => !!v || "Password is required"],
+    };
   },
   methods: {
     validate() {
-      return this.$refs.form.validate()
+      return this.$refs.form.validate();
     },
     login() {
       if (this.validate()) {
-        let request = `/api/users/user?userEmail=${this.email}&userPassword=${this.password}`
-        axios.get(this.bctx + request)
-            .then(response => {
-              if (response.data === "") {
-                if (confirm("User doesn't exist. Want to register?")) {
-                  this.$router.push({name: 'register'})
-                }
-              } else {
-                this.$router.push({name: 'home'})
-              }
+        const user = {
+          id: 0,
+          age: 0,
+          email: this.email,
+          name: "",
+          password: this.password,
+          reviewedMovies: [],
+          watchlistMovies: [],
+        };
+        axios
+            .post(this.bctx + "/api/users/user", user)
+            .then(() => {
+              this.$router.push({name: "home"});
             })
-            .catch(error => (console.log(error)))
+            .catch((error) => {
+              if (confirm("User doesn't exist. Want to register?")) {
+                this.$router.push({name: "register"});
+              }
+            });
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
