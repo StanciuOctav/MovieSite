@@ -20,6 +20,7 @@ public class DirectorServiceImpl implements DirectorService {
 
     @Autowired
     public DirectorServiceImpl(DirectorRepository directorRepository) {
+        super();
         this.directorRepository = directorRepository;
     }
 
