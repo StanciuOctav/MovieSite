@@ -20,6 +20,17 @@
     </properties>
 
     <dependencies>
+        <!--        FOR THROWING EXCEPTIONS          -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-rest-webmvc</artifactId>
+        </dependency>
+        <!--        MODEL MAPPER FOR DTOs          -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.0.0</version>
+        </dependency>
         <!--        VALIDATION          -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

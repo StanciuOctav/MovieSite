@@ -6,7 +6,6 @@ import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
-import javax.validation.constraints.*;
 import java.util.Collection;
 
 @Node("ACTOR")

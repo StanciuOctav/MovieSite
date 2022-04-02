@@ -22,15 +22,13 @@ public class DirectorController {
     }
 
     @GetMapping
-    public ResponseEntity<Collection<Director>> getAllDirectors() {
-        Collection<Director> directors = this.directorService.getAllDirectors();
-        return ResponseEntity.ok().body(directors);
+    public ResponseEntity<?> getAllDirectors() {
+        return this.directorService.getAllDirectors();
     }
 
     @GetMapping("/{directorId}")
-    public ResponseEntity<Director> getDirectorById(@PathVariable Long directorId) {
-        Director director = this.directorService.getDirectorById(directorId);
-        return ResponseEntity.ok(director);
+    public ResponseEntity<?> getDirectorById(@PathVariable Long directorId) {
+        return this.directorService.getDirectorById(directorId);
     }
 
     @PostMapping
