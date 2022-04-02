@@ -13,4 +13,6 @@ public interface DirectorRepository extends Neo4jRepository<Director, Long> {
 
     @Query("MATCH (d:DIRECTOR)-[dir:DIRECTED]->(m:MOVIE) WHERE ID(d) = $directorId RETURN d, collect(dir), collect(m)")
     Director getDirectorById(Long directorId);
+
+    Director findByName(String name);
 }

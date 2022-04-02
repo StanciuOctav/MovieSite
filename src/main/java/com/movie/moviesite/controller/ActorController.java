@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -18,19 +19,20 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/actors")
 public class ActorController {
 
-    @Autowired
-    private ModelMapper modelMapper;
-
     private final ActorService actorService;
+    private final ModelMapper modelMapper;
 
     @Autowired
-    public ActorController(ActorService actorService) {
+    public ActorController(ActorService actorService, ModelMapper modelMapper) {
         this.actorService = actorService;
+        this.modelMapper = modelMapper;
     }
 
     @GetMapping
     public Collection<ActorDTO> getAllActors() {
-        return this.actorService.getAllActors().stream().map(actor -> modelMapper.map(actor, ActorDTO.class))
+        return this.actorService.getAllActors()
+                .stream()
+                .map(actor -> modelMapper.map(actor, ActorDTO.class))
                 .collect(Collectors.toList());
     }
 

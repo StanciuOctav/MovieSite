@@ -30,7 +30,7 @@ public class ActorServiceImpl implements ActorService {
     }
 
     @Override
-    public Actor getActorById(Long id) throws ConfigDataResourceNotFoundException {
+    public Actor getActorById(Long id) {
         Optional<Actor> actor = this.actorRepository.findById(id);
         if (actor.isPresent()) {
             return actor.get();
