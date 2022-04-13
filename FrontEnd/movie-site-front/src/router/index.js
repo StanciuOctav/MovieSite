@@ -9,9 +9,13 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/login',
         name: 'login',
         component: LoginView
+    },
+    {
+        path: '/logout',
+        name: 'logout'
     },
     {
         path: '/register',

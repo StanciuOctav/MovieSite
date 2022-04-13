@@ -9,20 +9,19 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.net.URI;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/directors")
-public class DirectorController {
+public class DirectorAPIController {
 
     private final DirectorServiceImpl directorService;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public DirectorController(DirectorServiceImpl directorService, ModelMapper modelMapper) {
+    public DirectorAPIController(DirectorServiceImpl directorService, ModelMapper modelMapper) {
         this.directorService = directorService;
         this.modelMapper = modelMapper;
     }

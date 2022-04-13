@@ -15,12 +15,12 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/movies")
-public class MovieController {
+public class MovieAPIController {
     private final MovieServiceImpl movieService;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public MovieController(MovieServiceImpl movieService, ModelMapper modelMapper) {
+    public MovieAPIController(MovieServiceImpl movieService, ModelMapper modelMapper) {
         this.movieService = movieService;
         this.modelMapper = modelMapper;
     }

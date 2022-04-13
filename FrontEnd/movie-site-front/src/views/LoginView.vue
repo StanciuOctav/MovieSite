@@ -57,20 +57,15 @@ export default {
     login() {
       if (this.validate()) {
         const user = {
-          id: 0,
-          age: 0,
           email: this.email,
-          name: "",
           password: this.password,
-          reviewedMovies: [],
-          watchlistMovies: [],
         };
         axios
             .post(this.bctx + "/api/users/user", user)
             .then(() => {
               this.$router.push({name: "home"});
             })
-            .catch((error) => {
+            .catch(() => {
               if (confirm("User doesn't exist. Want to register?")) {
                 this.$router.push({name: "register"});
               }

@@ -7,7 +7,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -17,13 +16,13 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/actors")
-public class ActorController {
+public class ActorAPIController {
 
     private final ActorService actorService;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public ActorController(ActorService actorService, ModelMapper modelMapper) {
+    public ActorAPIController(ActorService actorService, ModelMapper modelMapper) {
         this.actorService = actorService;
         this.modelMapper = modelMapper;
     }
