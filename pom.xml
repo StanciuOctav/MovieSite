@@ -21,10 +21,10 @@
 
     <dependencies>
         <!--        SECURITY          -->
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+        </dependency>
         <!--        FOR THROWING EXCEPTIONS          -->
         <dependency>
             <groupId>org.springframework.data</groupId>

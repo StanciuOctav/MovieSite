@@ -56,16 +56,16 @@ export default {
     },
     login() {
       if (this.validate()) {
-        const user = {
-          email: this.email,
-          password: this.password,
-        };
         axios
-            .post(this.bctx + "/api/users/user", user)
+            .post(this.bctx + "/login", {
+              email: this.email,
+              password: this.password,
+            })
             .then(() => {
               this.$router.push({name: "home"});
             })
-            .catch(() => {
+            .catch((error) => {
+              console.log(error);
               if (confirm("User doesn't exist. Want to register?")) {
                 this.$router.push({name: "register"});
               }
