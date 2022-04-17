@@ -4,21 +4,21 @@
     <br/>
     <v-form class="mx-4" ref="form" v-model="valid" lazy-validation>
       <v-text-field
-          v-model="movie.genre"
+          v-model="movieModel.genre"
           :rules="nameRules"
           label="Genre"
           required
       ></v-text-field>
 
       <v-text-field
-          v-model="movie.name"
+          v-model="movieModel.name"
           :rules="nameRules"
           label="Name"
           required
       ></v-text-field>
 
       <v-text-field
-          v-model="movie.releaseYear"
+          v-model="movieModel.releaseYear"
           :rules="releaseYearRules"
           label="Release year"
           required
@@ -49,23 +49,14 @@
 
 <script>
 import axios from "axios";
+import MovieModel from "@/models/MovieModel";
 
 export default {
   name: "Home",
   data() {
     return {
-      bctx: "http://localhost:8080",
-      fctx: window.location.protocol + "//" + window.location.host,
       valid: true,
-      movie: {
-        id: 0,
-        name: "",
-        genre: "",
-        releaseYear: "",
-        director: null,
-        actedInActors: [],
-        reviewedByUsers: [],
-      },
+      movieModel: new MovieModel(),
       selectDirector: null,
       directors: [],
       nameRules: [(v) => !!v || "This field is required"],
@@ -80,26 +71,44 @@ export default {
   created() {
     try {
       const movie = this.$route.params.movie;
-      (this.movie.id = movie.id), (this.movie.name = movie.name);
-      this.movie.genre = movie.genre;
-      this.movie.releaseYear = movie.releaseYear;
+      this.movieModel.setId(movie.id);
+      this.movieModel.setName(movie.name);
+      this.movieModel.setGenre(movie.genre);
+      this.movieModel.setReleaseYear(movie.releaseYear);
+      this.movieModel.setDirector(movie.director.name);
       this.selectDirector = movie.director.name;
     } catch {
       this.resetForm();
     }
-    axios.get(this.bctx + "/api/directors").then((response) => {
-      for (let i = 0; i < response.data.length; i++) {
-        this.directors.push(response.data[i]);
-        if (this.selectDirector === response.data[i].name) {
-          this.movie.director = this.directors[i];
-        }
-      }
-    });
+    axios
+        .get(process.env.VUE_APP_SERVER_URL + "/api/directors")
+        .then((response) => {
+          for (let i = 0; i < response.data.length; i++) {
+            this.directors.push(response.data[i]);
+            if (this.selectDirector === response.data[i].name) {
+              this.movieModel.director = this.directors[i];
+            }
+          }
+        });
   },
   methods: {
+    addMovie() {
+      if (this.validate()) {
+        this.movieModel
+            .createMovieModel()
+            .then(() => {
+              alert(this.movieModel.name + " was added");
+              this.$router.push({name: "home"});
+            })
+            .catch((error) => {
+              console.log(error);
+              alert("This movie already exists");
+            });
+      }
+    },
     updateMovie() {
-      axios
-          .patch(this.bctx + "/api/movies/" + this.movie.id, this.movie)
+      this.movieModel
+          .updateMovieModel()
           .then((response) => {
             alert("Movie updated");
             this.$router.push({name: "home"});
@@ -109,32 +118,10 @@ export default {
     validate() {
       return this.$refs.form.validate();
     },
-    addMovie: function () {
-      if (this.validate()) {
-        const movie = {
-          name: this.movie.name,
-          genre: this.movie.genre,
-          releaseYear: this.movie.releaseYear,
-          director: null,
-          actedInActors: [],
-          reviewedByUsers: [],
-        };
-        axios
-            .post(
-                this.bctx + "/api/movies?director=" + this.selectDirector,
-                movie
-            )
-            .then(() => {
-              alert(this.movie.name + " was added");
-              this.$router.push({name: "home"});
-            })
-            .catch(() => alert("This movie already exists"));
-      }
-    },
-    resetForm: function () {
-      this.movie.genre = "";
-      this.movie.name = "";
-      this.movie.releaseYear = "";
+    resetForm() {
+      this.movieModel.genre = "";
+      this.movieModel.name = "";
+      this.movieModel.releaseYear = "";
       this.selectDirector = null;
     },
   },
@@ -142,8 +129,7 @@ export default {
     selectDirector() {
       for (let i = 0; i < this.directors.length; i++) {
         if (this.selectDirector === this.directors[i].name) {
-          this.movie.director = this.directors[i];
-          console.log(this.movie.director);
+          this.movieModel.director = this.directors[i];
         }
       }
     },

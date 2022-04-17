@@ -9,7 +9,7 @@ public interface MovieService {
 
     Movie getMovieById(Long id);
 
-    Movie createMovie(Movie movie, String directedBy);
+    Movie createMovie(Movie movie);
 
     Movie updateMovie(Long id, Movie movie);
 

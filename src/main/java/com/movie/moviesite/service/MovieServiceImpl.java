@@ -37,13 +37,13 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public Movie createMovie(Movie movie, String directedBy) {
+    public Movie createMovie(Movie movie) {
         Movie movie1 = this.movieRepostitory.findByName(movie.getName());
         if (movie1 != null) {
             return null;
         } else {
             this.movieRepostitory.save(movie);
-            this.movieRepostitory.createDirectedRel(movie.getName(), directedBy);
+            //this.movieRepostitory.createDirectedRel(movie.getName(), directedBy);
             return movie;
         }
     }
@@ -55,7 +55,7 @@ public class MovieServiceImpl implements MovieService {
         movie1.setGenre(movie.getGenre());
         movie1.setReleaseYear(movie.getReleaseYear());
         movie1.setName(movie.getName());
-        // TODO: also update the director
+        movie1.setDirector(movie.getDirector());
         return this.movieRepostitory.save(movie1);
     }
 

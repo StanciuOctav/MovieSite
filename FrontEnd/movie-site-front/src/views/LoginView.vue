@@ -30,13 +30,12 @@
 </template>
 
 <script>
-import axios from "axios";
+import UserModel from "../models/UserModel";
 
 export default {
   name: "Login",
   data() {
     return {
-      bctx: "http://localhost:8080",
       valid: true,
       email: "",
       password: "",
@@ -56,16 +55,13 @@ export default {
     },
     login() {
       if (this.validate()) {
-        const user = {
-          email: this.email,
-          password: this.password,
-        };
-        axios
-            .post(this.bctx + "/api/users/user", user)
+        new UserModel(this.email, this.password)
+            .login()
             .then(() => {
               this.$router.push({name: "home"});
             })
-            .catch(() => {
+            .catch((error) => {
+              console.log(error);
               if (confirm("User doesn't exist. Want to register?")) {
                 this.$router.push({name: "register"});
               }

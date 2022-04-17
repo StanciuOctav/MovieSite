@@ -34,14 +34,13 @@ export default {
   name: "Home",
   data() {
     return {
-      bctx: "http://localhost:8080",
       movies: [],
     };
   },
   // this is when the component is added to the DOM
   mounted() {
     axios
-        .get(this.bctx + "/api/movies")
+        .get(process.env.VUE_APP_SERVER_URL + "/api/movies")
         .then((response) => {
           for (let i = 0; i < response.data.length; i++) {
             this.movies.push(response.data[i]);
@@ -53,20 +52,22 @@ export default {
   methods: {
     deleteMovie: function (movieId) {
       axios
-          .delete(this.bctx + "/api/movies/" + movieId)
-          .then((response) => {
+          .delete(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
+          .then(() => {
             alert("Selected movie was deleted");
             this.$router.go();
           })
           .catch((error) => alert(error));
     },
     updateMovie(movieId) {
-      axios.get(this.bctx + "/api/movies/" + movieId).then((response) => {
-        this.$router.push({
-          name: "addMovie",
-          params: {movie: response.data},
-        });
-      });
+      axios
+          .get(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
+          .then((response) => {
+            this.$router.push({
+              name: "addMovie",
+              params: {movie: response.data},
+            });
+          });
     },
   },
   // used for rendering different components (used especially with v-for)

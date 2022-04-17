@@ -41,9 +41,10 @@ public class MovieAPIController {
     }
 
     @PostMapping
-    public ResponseEntity<MovieDTO> saveMovie(@RequestBody MovieDTO movieDTO, @RequestParam("director") String directedBy) {
+    public ResponseEntity<MovieDTO> saveMovie(@RequestBody MovieDTO movieDTO) {
+        System.out.println(movieDTO);
         Movie movie = modelMapper.map(movieDTO, Movie.class);
-        Movie movie1 = this.movieService.createMovie(movie, directedBy);
+        Movie movie1 = this.movieService.createMovie(movie);
         MovieDTO movieDTO1 = modelMapper.map(movie1, MovieDTO.class);
         return ResponseEntity.ok(movieDTO1);
     }

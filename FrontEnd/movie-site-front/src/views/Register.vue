@@ -41,13 +41,12 @@
 </template>
 
 <script>
-import axios from "axios";
+import UserModel from "../models/UserModel";
 
 export default {
   name: "Register",
   data() {
     return {
-      bctx: "http://localhost:8080",
       name: "",
       age: "",
       email: "",
@@ -75,15 +74,9 @@ export default {
     },
     register() {
       if (this.validate()) {
-        const user = {
-          age: this.age,
-          email: this.email,
-          name: this.name,
-          password: this.password,
-        };
-        axios
-            .post(this.bctx + "/api/users", user)
-            .then((response) => {
+        new UserModel(this.email, this.password, this.age, this.name)
+            .register()
+            .then(() => {
               alert("Registration complete");
               this.$router.push({name: "login"});
             })
