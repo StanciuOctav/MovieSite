@@ -1,12 +1,13 @@
 import axios from "axios";
 
 export default class MovieModel {
-    constructor(id, name, genre, releaseYear, director) {
+    constructor(id, name, genre, releaseYear, director, imageURL) {
         this.id = id
         this.name = name
         this.genre = genre
         this.releaseYear = releaseYear
         this.director = director
+        this.imageURL = imageURL
     }
 
     createMovieModel() {
@@ -20,6 +21,10 @@ export default class MovieModel {
                 process.env.VUE_APP_SERVER_URL + "/api/movies/" + this.id,
                 this
             )
+    }
+
+    setImage(imageURL) {
+        this.imageURL = imageURL
     }
 
     setId(id) {

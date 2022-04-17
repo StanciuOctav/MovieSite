@@ -9,5 +9,6 @@ public class MovieDTO {
     private String name;
     private String genre;
     private Integer releaseYear;
+    private String imageURL;
     private DirectorDTO director;
 }

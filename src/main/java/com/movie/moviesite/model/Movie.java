@@ -23,6 +23,7 @@ public class Movie {
     private String name;
     private String genre;
     private Integer releaseYear;
+    private String imageURL;
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private Director director;

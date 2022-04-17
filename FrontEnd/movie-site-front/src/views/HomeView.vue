@@ -2,28 +2,43 @@
   <div>
     <ul>
       <li class="box" v-for="movie in renderMovies" :key="movie.id">
-        <p>Genre: {{ movie.genre }}</p>
-        <p>Movie name: {{ movie.name }}</p>
-        <p>Release year: {{ movie.releaseYear }}</p>
-        <p>Directed by: {{ movie.director.name }}</p>
+        <div class="gallery" @click="showMovieDetails(movie.id)">
+          <img :src="movie.imageURL"/>
+          <p>Genre: {{ movie.genre }}</p>
+          <p>Movie name: {{ movie.name }}</p>
+          <p>Release year: {{ movie.releaseYear }}</p>
+          <p>Directed by: {{ movie.director.name }}</p>
 
-        <v-btn @click="updateMovie(movie.id)" color="info">Update</v-btn>
-        <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4">
-          X
-        </v-btn>
+          <v-btn @click="updateMovie(movie.id)" color="info">Update</v-btn>
+          <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4">
+            X
+          </v-btn>
+        </div>
       </li>
     </ul>
   </div>
 </template>
 
 <style>
-.box {
-  padding: 100px 0;
-  width: 400px;
+ul li {
+  display: inline-table;
+}
+
+div.gallery {
+  margin: 30px;
+  border: 1px solid rgb(191, 0, 250);
+  width: 300px;
+  display: inline-table;
   text-align: center;
-  background-color: #ddd;
-  margin: 20px;
-  display: inline-block;
+}
+
+div.gallery:hover {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 </style>
 
@@ -50,7 +65,17 @@ export default {
   },
   // basic methods
   methods: {
-    deleteMovie: function (movieId) {
+    showMovieDetails(movieId) {
+      axios
+          .get(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
+          .then((response) => {
+            this.$router.push({
+              name: "movieDetails",
+              params: {movie: response.data},
+            });
+          });
+    },
+    deleteMovie(movieId) {
       axios
           .delete(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
           .then(() => {
