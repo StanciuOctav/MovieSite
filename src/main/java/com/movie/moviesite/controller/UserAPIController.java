@@ -49,9 +49,11 @@ public class UserAPIController {
     }
 
     @PostMapping("/user")
-    public ResponseEntity<?> userLogin(@RequestBody User user) {
-        System.out.println(user);
-        return this.userService.checkUserLogin(user);
+    public ResponseEntity<?> userLogin(@RequestBody UserDTO userDTO) {
+        User user = modelMapper.map(userDTO, User.class);
+        User user1 = this.userService.checkUserLogin(user);
+        UserDTO userDTO1 = modelMapper.map(user1, UserDTO.class);
+        return userDTO1 != null ? ResponseEntity.ok(userDTO1) : ResponseEntity.status(404).body("User not found");
     }
 
     @PatchMapping("/{id}")

@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.text.html.Option;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -25,13 +26,8 @@ public class UserServiceImpl implements UserService {
         return this.userRepository.checkUser(email, password);
     }
 
-    public ResponseEntity<?> checkUserLogin(User user) {
-        User oldUser = this.userRepository.checkUser(user.getEmail(), user.getPassword());
-        if (oldUser == null) {
-            return ResponseEntity.status(409).body("There is no user with these fields in DB");
-        } else {
-            return ResponseEntity.ok(user);
-        }
+    public User checkUserLogin(User user) {
+        return this.userRepository.findByEmail(user.getEmail());
     }
 
 

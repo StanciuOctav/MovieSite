@@ -57,7 +57,12 @@ export default {
       if (this.validate()) {
         new UserModel(this.email, this.password)
             .login()
-            .then(() => {
+            .then((response) => {
+              const user = response.data;
+              localStorage.setItem("username", user.name);
+              localStorage.setItem("email", user.email);
+              localStorage.setItem("password", user.password);
+              this.$root.$emit("changeLoggedIn");
               this.$router.push({name: "home"});
             })
             .catch((error) => {

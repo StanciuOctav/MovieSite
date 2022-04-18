@@ -6,7 +6,6 @@ import org.springframework.data.neo4j.repository.query.Query;
 
 import java.util.Collection;
 
-// TODO: update these queries so that they execute on the logged in User
 public interface UserRepository extends Neo4jRepository<User, Long> {
     User findByEmail(String email);
 

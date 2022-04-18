@@ -5,6 +5,7 @@ import Register from '../views/Register.vue'
 import HomeView from '../views/HomeView.vue'
 import AddMovieFormView from '../views/AddMovieFormView.vue'
 import MovieDetailsView from '../views/MovieDetailsView.vue'
+import LogoutView from '../views/LogoutView.vue'
 
 Vue.use(VueRouter)
 
@@ -16,7 +17,8 @@ const routes = [
     },
     {
         path: '/logout',
-        name: 'logout'
+        name: 'logout',
+        component: LogoutView
     },
     {
         path: '/register',
