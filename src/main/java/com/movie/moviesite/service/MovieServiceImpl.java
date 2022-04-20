@@ -43,7 +43,6 @@ public class MovieServiceImpl implements MovieService {
             return null;
         } else {
             this.movieRepostitory.save(movie);
-            //this.movieRepostitory.createDirectedRel(movie.getName(), directedBy);
             return movie;
         }
     }

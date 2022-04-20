@@ -24,6 +24,7 @@ public class Movie {
     private String genre;
     private Integer releaseYear;
     private String imageURL;
+    private String description;
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private Director director;

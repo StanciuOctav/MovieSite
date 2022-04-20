@@ -9,4 +9,5 @@ public class DirectorDTO {
     private Integer age;
     private String bornIn;
     private Long netWorth;
+    private String imageURL;
 }

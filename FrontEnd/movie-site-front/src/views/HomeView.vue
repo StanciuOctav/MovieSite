@@ -4,15 +4,13 @@
       <li class="box" v-for="movie in renderMovies" :key="movie.id">
         <div class="gallery" @click="showMovieDetails(movie.id)">
           <img :src="movie.imageURL"/>
-          <p>Genre: {{ movie.genre }}</p>
-          <p>Movie name: {{ movie.name }}</p>
-          <p>Release year: {{ movie.releaseYear }}</p>
-          <p>Directed by: {{ movie.director.name }}</p>
+          <h3>{{ movie.name }}</h3>
 
           <v-btn @click="updateMovie(movie.id)" color="info">Update</v-btn>
-          <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4">
-            X
-          </v-btn>
+          <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4"
+          >X
+          </v-btn
+          >
         </div>
       </li>
     </ul>
@@ -26,14 +24,13 @@ ul li {
 
 div.gallery {
   margin: 30px;
-  border: 1px solid rgb(191, 0, 250);
   width: 300px;
   display: inline-table;
   text-align: center;
 }
 
 div.gallery:hover {
-  border: 1px solid rgb(255, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 img {

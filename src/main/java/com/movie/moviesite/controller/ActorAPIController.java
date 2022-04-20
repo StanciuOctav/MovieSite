@@ -3,6 +3,7 @@ package com.movie.moviesite.controller;
 import com.movie.moviesite.dto.ActorDTO;
 import com.movie.moviesite.interfaces.ActorService;
 import com.movie.moviesite.model.Actor;
+import com.movie.moviesite.service.ActorServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,11 +19,11 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/actors")
 public class ActorAPIController {
 
-    private final ActorService actorService;
+    private final ActorServiceImpl actorService;
     private final ModelMapper modelMapper;
 
     @Autowired
-    public ActorAPIController(ActorService actorService, ModelMapper modelMapper) {
+    public ActorAPIController(ActorServiceImpl actorService, ModelMapper modelMapper) {
         this.actorService = actorService;
         this.modelMapper = modelMapper;
     }

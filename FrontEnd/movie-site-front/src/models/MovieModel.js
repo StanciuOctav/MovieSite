@@ -1,13 +1,15 @@
 import axios from "axios";
 
 export default class MovieModel {
-    constructor(id, name, genre, releaseYear, director, imageURL) {
-        this.id = id
-        this.name = name
-        this.genre = genre
-        this.releaseYear = releaseYear
-        this.director = director
-        this.imageURL = imageURL
+    constructor(id, name, genre, releaseYear, director, imageURL, description, actors) {
+        this._id = id;
+        this._name = name;
+        this._genre = genre;
+        this._releaseYear = releaseYear;
+        this._director = director;
+        this._imageURL = imageURL;
+        this._description = description;
+        this._actors = actors;
     }
 
     createMovieModel() {
@@ -18,32 +20,73 @@ export default class MovieModel {
     updateMovieModel() {
         return axios
             .patch(
-                process.env.VUE_APP_SERVER_URL + "/api/movies/" + this.id,
+                process.env.VUE_APP_SERVER_URL + "/api/movies/" + this._id,
                 this
             )
     }
 
-    setImage(imageURL) {
-        this.imageURL = imageURL
+    get actors() {
+        return this._actors;
     }
 
-    setId(id) {
-        this.id = id
+    set actors(actors) {
+        this._actors = actors;
     }
 
-    setName(name) {
-        this.name = name
+
+    get id() {
+        return this._id;
     }
 
-    setGenre(genre) {
-        this.genre = genre
+    set id(value) {
+        this._id = value;
     }
 
-    setReleaseYear(releaseYear) {
-        this.releaseYear = releaseYear
+    get name() {
+        return this._name;
     }
 
-    setDirector(director) {
-        this.director = director
+    set name(value) {
+        this._name = value;
+    }
+
+    get genre() {
+        return this._genre;
+    }
+
+    set genre(value) {
+        this._genre = value;
+    }
+
+    get releaseYear() {
+        return this._releaseYear;
+    }
+
+    set releaseYear(value) {
+        this._releaseYear = value;
+    }
+
+    get director() {
+        return this._director;
+    }
+
+    set director(value) {
+        this._director = value;
+    }
+
+    get imageURL() {
+        return this._imageURL;
+    }
+
+    set imageURL(value) {
+        this._imageURL = value;
+    }
+
+    get description() {
+        return this._description;
+    }
+
+    set description(value) {
+        this._description = value;
     }
 }

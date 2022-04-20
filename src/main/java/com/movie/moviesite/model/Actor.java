@@ -23,6 +23,7 @@ public class Actor {
     private Integer age;
     private String bornIn;
     private Long netWorth;
+    private String imageURL;
 
     @Relationship(type = "ACTED_IN")
     private Collection<Movie> moviesActedIn;

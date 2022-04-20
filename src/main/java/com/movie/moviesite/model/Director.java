@@ -23,6 +23,7 @@ public class Director {
     private Integer age;
     private String bornIn;
     private Long netWorth;
+    private String imageURL;
 
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.OUTGOING)
     private Collection<Movie> directedMovies;

@@ -1,6 +1,7 @@
 package com.movie.moviesite.repository;
 
 import com.movie.moviesite.model.Actor;
+import com.movie.moviesite.model.Movie;
 import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.data.neo4j.repository.query.Query;
 
@@ -15,8 +16,6 @@ public interface ActorRepository extends Neo4jRepository<Actor, Long> {
     @Query("MATCH (a:ACTOR)-[ai:ACTED_IN]->(m:MOVIE) RETURN a, collect(ai), collect(m)")
     Collection<Actor> getAllActors();
 
-    @Query("MATCH (a:ACTOR)-[ai:ACTED_IN]->(m:MOVIE) WHERE ID(a) = $actorId RETURN a, collect(ai), collect(m)")
-    Actor getActorById(Long actorId);
 
     Actor findByName(String name);
 }
