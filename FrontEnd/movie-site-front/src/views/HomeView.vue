@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #827397">
     <ul>
       <li class="box" v-for="movie in renderMovies" :key="movie.id">
         <div class="gallery" @click="showMovieDetails(movie.id)">
@@ -9,8 +9,7 @@
           <v-btn @click="updateMovie(movie.id)" color="info">Update</v-btn>
           <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4"
           >X
-          </v-btn
-          >
+          </v-btn>
         </div>
       </li>
     </ul>

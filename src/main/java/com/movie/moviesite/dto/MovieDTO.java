@@ -1,6 +1,5 @@
 package com.movie.moviesite.dto;
 
-import com.movie.moviesite.model.Actor;
 import lombok.Data;
 
 import java.util.Collection;
@@ -17,4 +16,5 @@ public class MovieDTO {
 
     private DirectorDTO director;
     private Collection<ActorDTO> actedInActors;
+    private Collection<ReviewedByUserDTO> reviewedByUsers;
 }

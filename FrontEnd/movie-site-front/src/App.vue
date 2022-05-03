@@ -67,7 +67,11 @@ export default {
   data: () => ({
     btns: [["Custom", "b-xl"]],
     colors: ["deep-purple accent-4"],
-    items: [{title: "Account details"}, {title: "Logout"}],
+    items: [
+      {title: "Watchlist"},
+      {title: "Account details"},
+      {title: "Logout"},
+    ],
     currUrl: window.location.href,
     loggedIn: true,
   }),
@@ -89,6 +93,9 @@ export default {
       }
       if (name === "Profile details") {
         console.log("Redirecting to profile page");
+      }
+      if (name === "Watchlist") {
+        console.log("Redirecting to watchlist");
       }
     },
     updateLogin() {

@@ -1,7 +1,10 @@
 package com.movie.moviesite.controller;
 
 import com.movie.moviesite.dto.MovieDTO;
+import com.movie.moviesite.dto.ReviewedByUserDTO;
+import com.movie.moviesite.dto.UserDTO;
 import com.movie.moviesite.model.Movie;
+import com.movie.moviesite.relationship.ReviewedByUser;
 import com.movie.moviesite.service.MovieServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -36,7 +40,17 @@ public class MovieAPIController {
     @GetMapping("/{id}")
     public ResponseEntity<MovieDTO> getMovieById(@PathVariable Long id) {
         Movie movie = this.movieService.getMovieById(id);
+
+        Collection<ReviewedByUserDTO> reviewedByUserDTOS = new ArrayList<>();
+        for (ReviewedByUser ru : movie.getReviewedByUsers()) {
+            UserDTO u = modelMapper.map(ru.getUser(), UserDTO.class);
+            ReviewedByUserDTO f = modelMapper.map(ru, ReviewedByUserDTO.class);
+            f.setUserDTO(u);
+            reviewedByUserDTOS.add(f);
+        }
         MovieDTO movieDTO = modelMapper.map(movie, MovieDTO.class);
+        movieDTO.setReviewedByUsers(reviewedByUserDTOS);
+
         return ResponseEntity.ok(movieDTO);
     }
 

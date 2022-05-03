@@ -9,8 +9,8 @@ import java.util.Collection;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 @NoArgsConstructor
+@ToString
 public class User {
 
     @Id
@@ -19,7 +19,7 @@ public class User {
     private Integer age;
     private String email;
     private String name;
-    private String password; // TODO: create an annotation that verifies password for more details
+    private String password;
 
     @Relationship(type = "REVIEWED", direction = Relationship.Direction.OUTGOING)
     private Collection<Reviewed> reviewedMovies;

@@ -25,6 +25,16 @@ export default class MovieModel {
             )
     }
 
+    addMovieReview(id, email, content) {
+        const url = `${process.env.VUE_APP_SERVER_URL}/api/review/${id}/${email}/${content}`;
+        return axios.post(url);
+    }
+
+    deleteMovieReview(id, email) {
+        const url = `${process.env.VUE_APP_SERVER_URL}/api/review/${id}/${email}`;
+        return axios.delete(url)
+    }
+
     get actors() {
         return this._actors;
     }
