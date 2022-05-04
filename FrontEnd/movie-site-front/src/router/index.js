@@ -8,6 +8,7 @@ import MovieDetailsView from '../views/MovieDetailsView.vue'
 import LogoutView from '../views/LogoutView.vue'
 import DirectorDetailsView from '../views/DirectorDetailsView.vue'
 import ActorDetailsView from '../views/ActorDetailsView.vue'
+import LoggedUserDetailsView from '../views/LoggedUserDetailsView.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
         path: '/actorDetails',
         name: 'actorDetails',
         component: ActorDetailsView
+    },
+    {
+        path: '/userDetails',
+        name: 'userDetails',
+        component: LoggedUserDetailsView
     },
 ]
 

@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import LoginView from "@/views/LoginView.vue";
 export default {
   name: "App",
@@ -68,7 +69,7 @@ export default {
     btns: [["Custom", "b-xl"]],
     colors: ["deep-purple accent-4"],
     items: [
-      {title: "Watchlist"},
+      /* { title: "Watchlist" }, */
       {title: "Account details"},
       {title: "Logout"},
     ],
@@ -91,12 +92,23 @@ export default {
       if (name === "Logout") {
         this.redirectLogout();
       }
-      if (name === "Profile details") {
-        console.log("Redirecting to profile page");
+      if (name === "Account details") {
+        axios
+            .get(
+                process.env.VUE_APP_SERVER_URL +
+                "/api/users/getByEmail/" +
+                localStorage.getItem("email")
+            )
+            .then((response) => {
+              this.$router.push({
+                name: "userDetails",
+                params: {user: response.data},
+              });
+            });
       }
-      if (name === "Watchlist") {
+      /*       if (name === "Watchlist") {
         console.log("Redirecting to watchlist");
-      }
+      } */
     },
     updateLogin() {
       this.loggedIn = !this.loggedIn;

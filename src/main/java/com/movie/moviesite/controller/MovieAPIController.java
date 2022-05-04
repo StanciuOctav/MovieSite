@@ -30,6 +30,14 @@ public class MovieAPIController {
         this.modelMapper = modelMapper;
     }
 
+    @GetMapping("/reviewed/{email}")
+    public Collection<MovieDTO> getReviewedMovies(@PathVariable("email") String email) {
+        return this.movieService.getReviewedMovies(email)
+                .stream()
+                .map((movie -> modelMapper.map(movie, MovieDTO.class)))
+                .collect(Collectors.toList());
+    }
+
     @GetMapping("/moviesActedIn/{actorId}")
     public Collection<MovieDTO> getMoviesActedIn(@PathVariable("actorId") Long actorId) {
         return this.movieService.getMoviesActedIn(actorId)

@@ -9,4 +9,6 @@ public interface UserRepository extends Neo4jRepository<User, Long> {
 
     @Query("MATCH (u:USER) WHERE u.email = $email OR u.password = $password RETURN u")
     User checkUser(String email, String password);
+
+    User getUserByEmail(String email);
 }

@@ -33,6 +33,11 @@ public class UserAPIController {
                 .collect(Collectors.toList());
     }
 
+    @GetMapping("/getByEmail/{email}")
+    public UserDTO getUserByEmail(@PathVariable("email") String email) {
+        return modelMapper.map(this.userService.getUserByEmail(email), UserDTO.class);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         User user = this.userService.getUserById(id);

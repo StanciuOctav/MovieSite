@@ -20,6 +20,10 @@ public class MovieServiceImpl implements MovieService {
         this.movieRepostitory = movieRepostitory;
     }
 
+    public Collection<Movie> getReviewedMovies(String email) {
+        return this.movieRepostitory.getReviewedMovies(email);
+    }
+
     public Collection<Movie> getMoviesActedIn(Long actorId) {
         return this.movieRepostitory.getMoviesActedIn(actorId);
     }
