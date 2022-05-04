@@ -13,6 +13,4 @@ public class ActorDTO {
     private String bornIn;
     private Long netWorth;
     private String imageURL;
-
-    //private Collection<Movie> movies;
 }

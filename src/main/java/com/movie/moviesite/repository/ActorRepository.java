@@ -16,6 +16,8 @@ public interface ActorRepository extends Neo4jRepository<Actor, Long> {
     @Query("MATCH (a:ACTOR)-[ai:ACTED_IN]->(m:MOVIE) RETURN a, collect(ai), collect(m)")
     Collection<Actor> getAllActors();
 
-
     Actor findByName(String name);
+
+    @Query("MATCH (a:ACTOR)-[:ACTED_IN]->(m:MOVIE) WHERE ID(m) = $movieId RETURN a")
+    Collection<Actor> getActedInActors(Long movieId);
 }

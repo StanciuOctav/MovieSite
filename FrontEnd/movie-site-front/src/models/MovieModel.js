@@ -1,27 +1,40 @@
 import axios from "axios";
 
 export default class MovieModel {
-    constructor(id, name, genre, releaseYear, director, imageURL, description, actors) {
+    constructor(id, name, genre, releaseYear, imageURL, director, description) {
         this._id = id;
         this._name = name;
         this._genre = genre;
         this._releaseYear = releaseYear;
-        this._director = director;
         this._imageURL = imageURL;
         this._description = description;
-        this._actors = actors;
+        this._director = director;
     }
 
     createMovieModel() {
         return axios
-            .post(process.env.VUE_APP_SERVER_URL + "/api/movies", this)
+            .post(process.env.VUE_APP_SERVER_URL + "/api/movies", {
+                name: this._name,
+                genre: this._genre,
+                releaseYear: this._releaseYear,
+                imageURL: this._imageURL,
+                description: this._description,
+                director: this._director
+            })
     }
 
     updateMovieModel() {
         return axios
             .patch(
                 process.env.VUE_APP_SERVER_URL + "/api/movies/" + this._id,
-                this
+                {
+                    name: this._name,
+                    genre: this._genre,
+                    releaseYear: this._releaseYear,
+                    imageURL: this._imageURL,
+                    description: this._description,
+                    director: this._director
+                }
             )
     }
 

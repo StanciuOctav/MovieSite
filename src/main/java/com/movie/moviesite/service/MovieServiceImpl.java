@@ -5,7 +5,6 @@ import com.movie.moviesite.model.Movie;
 import com.movie.moviesite.repository.MovieRepostitory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -36,6 +35,14 @@ public class MovieServiceImpl implements MovieService {
         }
     }
 
+    public Movie getMovieReview(Long movieId) {
+        try {
+            return this.movieRepostitory.getMovieReview(movieId);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     @Override
     public Movie createMovie(Movie movie) {
         Movie movie1 = this.movieRepostitory.findByName(movie.getName());
@@ -55,6 +62,8 @@ public class MovieServiceImpl implements MovieService {
         movie1.setReleaseYear(movie.getReleaseYear());
         movie1.setName(movie.getName());
         movie1.setDirector(movie.getDirector());
+        movie1.setDescription(movie.getDescription());
+        movie1.setImageURL(movie.getImageURL());
         return this.movieRepostitory.save(movie1);
     }
 

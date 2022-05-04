@@ -28,10 +28,10 @@
       Actors that played in <u>"{{ movie.name }}"</u>
     </h2>
     <ul>
-      <li v-for="m in movie.actedInActors" :key="m.id">
+      <li v-for="a in actors" :key="a.id">
         <div class="gallery">
-          <h2>{{ m.name }}</h2>
-          <img :src="m.imageURL" @click="redirectToActor(m.id)"/>
+          <h2>{{ a.name }}</h2>
+          <img :src="a.imageURL" @click="redirectToActor(a.id)"/>
         </div>
       </li>
     </ul>
@@ -39,13 +39,13 @@
     <h2 style="padding-left: 50px"><u>All the reviews</u></h2>
     <div id="second" v-if="areReviews">
       <li
-          v-for="user in getUsersReviews"
-          :key="user.id"
+          v-for="r in getUsersReviews"
+          :key="r.id"
           style="list-style-type: none"
       >
-        <b>{{ user.userDTO.name }}</b
+        <b>{{ r.userDTO.name }}</b
         ><br/>
-        {{ user.content }}
+        {{ r.content }}
       </li>
     </div>
     <v-text-field
@@ -56,16 +56,14 @@
     </v-text-field>
     <v-btn @click="addMovieReview()" color="info" class="mx-4"
     >Add review
-    </v-btn
-    >
+    </v-btn>
     <v-btn
         v-if="userHasReview"
         @click="deleteMovieReview()"
         color="error"
         class="mx-4"
     >Delete your review
-    </v-btn
-    >
+    </v-btn>
     <br/>
     <b>Disclaimer: </b> If you already reviewed this movie, adding a new review
     will update your current one
@@ -102,6 +100,7 @@ export default {
   data() {
     return {
       movie: null,
+      actors: [],
       reviews: [],
       reviewContentToAdd: null,
       areReviews: false,
@@ -111,17 +110,21 @@ export default {
   },
   created() {
     this.movie = this.$route.params.movie;
-    this.reviews = this.movie.reviewedByUsers;
-    if (this.reviews.length > 0) {
-      this.areReviews = true;
-    } else {
-      this.areReviews = false;
-    }
-    this.reviews.forEach((review) => {
-      if (review.userDTO.name === localStorage.getItem("username")) {
-        this.userHasReview = true;
-      }
-    });
+    axios
+        .get(
+            process.env.VUE_APP_SERVER_URL + "/api/actors/actedIn/" + this.movie.id
+        )
+        .then((response) => {
+          this.actors = response.data;
+        });
+    axios
+        .get(
+            process.env.VUE_APP_SERVER_URL + "/api/movies/review/" + this.movie.id
+        )
+        .then((response) => {
+          this.reviews = response.data;
+          this.checkReviews();
+        });
   },
   methods: {
     redirectToDirector(directorId) {
@@ -129,6 +132,18 @@ export default {
     },
     redirectToActor(actorId) {
       console.log(actorId);
+    },
+    checkReviews() {
+      if (this.reviews.length > 0) {
+        this.areReviews = true;
+      } else {
+        this.areReviews = false;
+      }
+      this.reviews.forEach((review) => {
+        if (review.userDTO.name === localStorage.getItem("username")) {
+          this.userHasReview = true;
+        }
+      });
     },
     addMovieReview() {
       if (this.reviewContentToAdd !== null) {

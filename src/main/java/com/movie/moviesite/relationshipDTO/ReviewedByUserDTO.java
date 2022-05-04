@@ -1,5 +1,6 @@
-package com.movie.moviesite.dto;
+package com.movie.moviesite.relationshipDTO;
 
+import com.movie.moviesite.dto.UserDTO;
 import lombok.Data;
 
 @Data

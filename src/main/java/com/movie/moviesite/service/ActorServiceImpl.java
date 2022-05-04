@@ -29,6 +29,10 @@ public class ActorServiceImpl implements ActorService {
         return this.actorRepository.getAllActors();
     }
 
+    public Collection<Actor> getActedInActors(Long movieId) {
+        return this.actorRepository.getActedInActors(movieId);
+    }
+
     @Override
     public Actor getActorById(Long id) {
         Optional<Actor> actor = this.actorRepository.findById(id);

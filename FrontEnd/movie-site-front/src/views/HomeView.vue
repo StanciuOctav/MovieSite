@@ -2,10 +2,9 @@
   <div style="background-color: #827397">
     <ul>
       <li class="box" v-for="movie in renderMovies" :key="movie.id">
-        <div class="gallery" @click="showMovieDetails(movie.id)">
-          <img :src="movie.imageURL"/>
+        <div class="gallery">
+          <img :src="movie.imageURL" @click="showMovieDetails(movie.id)"/>
           <h3>{{ movie.name }}</h3>
-
           <v-btn @click="updateMovie(movie.id)" color="info">Update</v-btn>
           <v-btn @click="deleteMovie(movie.id)" color="error" class="mx-4"
           >X

@@ -1,6 +1,6 @@
 package com.movie.moviesite.dto;
 
-import com.movie.moviesite.model.Movie;
+import com.movie.moviesite.relationshipDTO.ReviewedDTO;
 import lombok.Data;
 
 import java.util.Collection;
@@ -13,6 +13,4 @@ public class UserDTO {
     private String name;
     private String password;
 
-    private Collection<ReviewedDTO> reviewedMovies;
-    private Collection<MovieDTO> watchlistMovies;
 }

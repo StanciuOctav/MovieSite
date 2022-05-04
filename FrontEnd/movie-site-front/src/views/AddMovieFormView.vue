@@ -24,6 +24,20 @@
           required
       ></v-text-field>
 
+      <v-text-field
+          v-model="movieModel.imageURL"
+          :rules="nameRules"
+          label="Image URL"
+          required
+      ></v-text-field>
+
+      <v-text-field
+          v-model="movieModel.description"
+          :rules="nameRules"
+          label="Description"
+          required
+      ></v-text-field>
+
       <v-select
           v-model="selectDirector"
           :items="directors"
@@ -71,11 +85,13 @@ export default {
   created() {
     try {
       const movie = this.$route.params.movie;
-      this.movieModel.setId(movie.id);
-      this.movieModel.setName(movie.name);
-      this.movieModel.setGenre(movie.genre);
-      this.movieModel.setReleaseYear(movie.releaseYear);
-      this.movieModel.setDirector(movie.director.name);
+      this.movieModel.id = movie.id;
+      this.movieModel.name = movie.name;
+      this.movieModel.genre = movie.genre;
+      this.movieModel.releaseYear = movie.releaseYear;
+      this.movieModel.imageURL = movie.imageURL;
+      this.movieModel.description = movie.description;
+      this.movieModel.director = movie.director.name;
       this.selectDirector = movie.director.name;
     } catch {
       this.resetForm();
@@ -94,6 +110,7 @@ export default {
   methods: {
     addMovie() {
       if (this.validate()) {
+        console.log(this.movieModel);
         this.movieModel
             .createMovieModel()
             .then(() => {
@@ -107,6 +124,7 @@ export default {
       }
     },
     updateMovie() {
+      console.log(this.movieModel);
       this.movieModel
           .updateMovieModel()
           .then((response) => {
@@ -122,6 +140,8 @@ export default {
       this.movieModel.genre = "";
       this.movieModel.name = "";
       this.movieModel.releaseYear = "";
+      this.movieModel.description = "";
+      this.movieModel.imageURL = "";
       this.selectDirector = null;
     },
   },
