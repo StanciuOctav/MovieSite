@@ -30,6 +30,14 @@ public class MovieAPIController {
         this.modelMapper = modelMapper;
     }
 
+    @GetMapping("/directedBy/{directorId}")
+    public Collection<MovieDTO> getDirectedMovies(@PathVariable("directorId") Long directorId) {
+        return this.movieService.getDirectedMovies(directorId)
+                .stream()
+                .map((movie -> modelMapper.map(movie, MovieDTO.class)))
+                .collect(Collectors.toList());
+    }
+
     @GetMapping
     public Collection<MovieDTO> getAllMovies() {
         return this.movieService.getAllMovies()

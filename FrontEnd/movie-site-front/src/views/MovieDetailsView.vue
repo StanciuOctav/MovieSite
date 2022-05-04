@@ -128,7 +128,14 @@ export default {
   },
   methods: {
     redirectToDirector(directorId) {
-      console.log(directorId);
+      axios
+          .get(process.env.VUE_APP_SERVER_URL + "/api/directors/" + directorId)
+          .then((response) => {
+            this.$router.push({
+              name: "directorDetails",
+              params: {director: response.data},
+            });
+          });
     },
     redirectToActor(actorId) {
       console.log(actorId);

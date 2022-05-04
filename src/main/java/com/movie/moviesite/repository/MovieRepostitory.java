@@ -18,4 +18,7 @@ public interface MovieRepostitory extends Neo4jRepository<Movie, Long> {
 
     @Query("MATCH (m:MOVIE)<-[r:REVIEWED]-(u:USER) WHERE ID(m) = $movieId return m, collect(r), collect(u)")
     Movie getMovieReview(Long movieId);
+
+    @Query("MATCH (d:DIRECTOR)-[di:DIRECTED]->(m:MOVIE) WHERE ID(d)=$directorId return m, collect(di), collect(d)")
+    Collection<Movie> getDirectedMovies(Long directorId);
 }

@@ -6,6 +6,7 @@ import HomeView from '../views/HomeView.vue'
 import AddMovieFormView from '../views/AddMovieFormView.vue'
 import MovieDetailsView from '../views/MovieDetailsView.vue'
 import LogoutView from '../views/LogoutView.vue'
+import DirectorDetailsView from '../views/DirectorDetailsView.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
         path: '/movieDetails',
         name: 'movieDetails',
         component: MovieDetailsView
+    },
+    {
+        path: '/directorDetails',
+        name: 'directorDetails',
+        component: DirectorDetailsView
     },
 ]
 

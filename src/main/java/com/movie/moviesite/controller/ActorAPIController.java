@@ -28,6 +28,14 @@ public class ActorAPIController {
         this.modelMapper = modelMapper;
     }
 
+    @GetMapping("/actedIn/{movieId}")
+    public Collection<ActorDTO> getActedInActors(@PathVariable("movieId") Long movieId) {
+        return this.actorService.getActedInActors(movieId)
+                .stream()
+                .map(actor -> modelMapper.map(actor, ActorDTO.class))
+                .collect(Collectors.toList());
+    }
+
     @GetMapping
     public Collection<ActorDTO> getAllActors() {
         return this.actorService.getAllActors()
