@@ -16,9 +16,12 @@ public interface MovieRepostitory extends Neo4jRepository<Movie, Long> {
             "RETURN m")
     void createDirectedRel(String movie, String directedBy);
 
-    @Query("MATCH (m:MOVIE)<-[r:REVIEWED]-(u:USER) WHERE ID(m) = $movieId return m, collect(r), collect(u)")
+    @Query("MATCH (m:MOVIE)<-[r:REVIEWED]-(u:USER) WHERE ID(m) = $movieId RETURN m, collect(r), collect(u)")
     Movie getMovieReview(Long movieId);
 
-    @Query("MATCH (d:DIRECTOR)-[di:DIRECTED]->(m:MOVIE) WHERE ID(d)=$directorId return m, collect(di), collect(d)")
+    @Query("MATCH (d:DIRECTOR)-[di:DIRECTED]->(m:MOVIE) WHERE ID(d)=$directorId RETURN m, collect(di), collect(d)")
     Collection<Movie> getDirectedMovies(Long directorId);
+
+    @Query("MATCH (m:MOVIE)<-[ai:ACTED_IN]-(a:ACTOR) WHERE ID(a) = $actorId RETURN m, collect(ai), collect(a)")
+    Collection<Movie> getMoviesActedIn(Long actorId);
 }

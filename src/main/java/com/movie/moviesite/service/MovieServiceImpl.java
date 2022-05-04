@@ -20,6 +20,10 @@ public class MovieServiceImpl implements MovieService {
         this.movieRepostitory = movieRepostitory;
     }
 
+    public Collection<Movie> getMoviesActedIn(Long actorId) {
+        return this.movieRepostitory.getMoviesActedIn(actorId);
+    }
+
     public Collection<Movie> getDirectedMovies(Long directorId) {
         return this.movieRepostitory.getDirectedMovies(directorId);
     }

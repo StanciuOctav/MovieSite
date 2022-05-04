@@ -138,7 +138,14 @@ export default {
           });
     },
     redirectToActor(actorId) {
-      console.log(actorId);
+      axios
+          .get(process.env.VUE_APP_SERVER_URL + "/api/actors/" + actorId)
+          .then((response) => {
+            this.$router.push({
+              name: "actorDetails",
+              params: {actor: response.data},
+            });
+          });
     },
     checkReviews() {
       if (this.reviews.length > 0) {
