@@ -38,6 +38,21 @@ public class MovieAPIController {
                 .collect(Collectors.toList());
     }
 
+    @GetMapping("/review/{movieId}")
+    public Collection<ReviewedByUserDTO> getMovieReview(@PathVariable("movieId") Long movieId) {
+        Collection<ReviewedByUser> reviewedByUsers = this.movieService.getMovieReview(movieId).getReviewedByUsers();
+        if (reviewedByUsers == null) {
+            return new ArrayList<>();
+        }
+        Collection<ReviewedByUserDTO> reviewed = new ArrayList<>();
+        for (ReviewedByUser r : reviewedByUsers) {
+            ReviewedByUserDTO aux = modelMapper.map(r, ReviewedByUserDTO.class);
+            aux.setUserDTO(modelMapper.map(r.getUser(), UserDTO.class));
+            reviewed.add(aux);
+        }
+        return reviewed;
+    }
+
     @GetMapping("/moviesActedIn/{actorId}")
     public Collection<MovieDTO> getMoviesActedIn(@PathVariable("actorId") Long actorId) {
         return this.movieService.getMoviesActedIn(actorId)
@@ -67,21 +82,6 @@ public class MovieAPIController {
         Movie movie = this.movieService.getMovieById(id);
         MovieDTO movieDTO = modelMapper.map(movie, MovieDTO.class);
         return ResponseEntity.ok(movieDTO);
-    }
-
-    @GetMapping("/review/{movieId}")
-    public Collection<ReviewedByUserDTO> getMovieReview(@PathVariable("movieId") Long movieId) {
-        Collection<ReviewedByUser> reviewedByUsers = this.movieService.getMovieReview(movieId).getReviewedByUsers();
-        if (reviewedByUsers == null) {
-            return new ArrayList<>();
-        }
-        Collection<ReviewedByUserDTO> reviewed = new ArrayList<>();
-        for (ReviewedByUser r : reviewedByUsers) {
-            ReviewedByUserDTO aux = modelMapper.map(r, ReviewedByUserDTO.class);
-            aux.setUserDTO(modelMapper.map(r.getUser(), UserDTO.class));
-            reviewed.add(aux);
-        }
-        return reviewed;
     }
 
     @PostMapping

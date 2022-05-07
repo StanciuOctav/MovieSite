@@ -14,7 +14,7 @@
       </li>
     </ul>
 
-    <div style="margin-top: 210px">
+    <div style="margin-top: 300px">
       <h2 style="margin-left: 50px">Directed Movies:</h2>
       <ul>
         <li v-for="m in directedMovies" :key="m.id">
@@ -61,27 +61,27 @@ export default {
     };
   },
   created() {
-    this.director = this.$route.params.director;
-    axios
-        .get(
-            process.env.VUE_APP_SERVER_URL +
-            "/api/movies/directedBy/" +
-            this.director.id
-        )
-        .then((response) => {
-          this.directedMovies = response.data;
-        });
+    let URL1 =
+        process.env.VUE_APP_SERVER_URL +
+        "/api/directors/" +
+        this.$route.params.id;
+    let URL2 =
+        process.env.VUE_APP_SERVER_URL +
+        "/api/movies/directedBy/" +
+        this.$route.params.id;
+    const promise1 = axios.get(URL1);
+    const promise2 = axios.get(URL2);
+    Promise.all([promise1, promise2]).then((values) => {
+      this.director = values[0].data;
+      this.directedMovies = values[1].data;
+    });
   },
   methods: {
     redirectToMovie(movieId) {
-      axios
-          .get(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
-          .then((response) => {
-            this.$router.push({
-              name: "movieDetails",
-              params: {movie: response.data},
-            });
-          });
+      this.$router.push({
+        name: "movieDetails",
+        params: {id: movieId},
+      });
     },
   },
   computed: {},

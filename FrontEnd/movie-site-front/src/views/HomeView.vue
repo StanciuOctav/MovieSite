@@ -66,7 +66,7 @@ export default {
           .then((response) => {
             this.$router.push({
               name: "movieDetails",
-              params: {movie: response.data},
+              params: {id: response.data.id},
             });
           });
     },

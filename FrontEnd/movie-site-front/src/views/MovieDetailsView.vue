@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="movie !== null">
     <ul>
       <li id="first">
         <img :src="movie.imageURL"/>
@@ -109,43 +109,40 @@ export default {
     };
   },
   created() {
-    this.movie = this.$route.params.movie;
-    axios
-        .get(
-            process.env.VUE_APP_SERVER_URL + "/api/actors/actedIn/" + this.movie.id
-        )
-        .then((response) => {
-          this.actors = response.data;
-        });
-    axios
-        .get(
-            process.env.VUE_APP_SERVER_URL + "/api/movies/review/" + this.movie.id
-        )
-        .then((response) => {
-          this.reviews = response.data;
-          this.checkReviews();
-        });
+    let URL1 =
+        process.env.VUE_APP_SERVER_URL + "/api/movies/" + this.$route.params.id;
+    let URL2 =
+        process.env.VUE_APP_SERVER_URL +
+        "/api/actors/actedIn/" +
+        this.$route.params.id;
+    let URL3 =
+        process.env.VUE_APP_SERVER_URL +
+        "/api/movies/review/" +
+        this.$route.params.id;
+
+    const promise1 = axios.get(URL1);
+    const promise2 = axios.get(URL2);
+    const promise3 = axios.get(URL3);
+
+    Promise.all([promise1, promise2, promise3]).then((values) => {
+      this.movie = values[0].data;
+      this.actors = values[1].data;
+      this.reviews = values[2].data;
+      this.checkReviews();
+    });
   },
   methods: {
     redirectToDirector(directorId) {
-      axios
-          .get(process.env.VUE_APP_SERVER_URL + "/api/directors/" + directorId)
-          .then((response) => {
-            this.$router.push({
-              name: "directorDetails",
-              params: {director: response.data},
-            });
-          });
+      this.$router.push({
+        name: "directorDetails",
+        params: {id: directorId},
+      });
     },
     redirectToActor(actorId) {
-      axios
-          .get(process.env.VUE_APP_SERVER_URL + "/api/actors/" + actorId)
-          .then((response) => {
-            this.$router.push({
-              name: "actorDetails",
-              params: {actor: response.data},
-            });
-          });
+      this.$router.push({
+        name: "actorDetails",
+        params: {id: actorId},
+      });
     },
     checkReviews() {
       if (this.reviews.length > 0) {

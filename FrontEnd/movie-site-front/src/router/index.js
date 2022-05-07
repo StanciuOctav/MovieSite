@@ -39,17 +39,17 @@ const routes = [
         component: AddMovieFormView
     },
     {
-        path: '/movieDetails',
+        path: '/movieDetails/:id',
         name: 'movieDetails',
         component: MovieDetailsView
     },
     {
-        path: '/directorDetails',
+        path: '/directorDetails/:id',
         name: 'directorDetails',
         component: DirectorDetailsView
     },
     {
-        path: '/actorDetails',
+        path: '/actorDetails/:id',
         name: 'actorDetails',
         component: ActorDetailsView
     },

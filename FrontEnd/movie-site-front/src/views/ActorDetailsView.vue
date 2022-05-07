@@ -14,7 +14,7 @@
       </li>
     </ul>
 
-    <div style="margin-top: 210px">
+    <div style="margin-top: 300px">
       <h2 style="margin-left: 50px">Movies that {{ actor.name }} acted in:</h2>
       <ul>
         <li v-for="m in actedInMovies" :key="m.id">
@@ -61,27 +61,27 @@ export default {
     };
   },
   created() {
-    this.actor = this.$route.params.actor;
-    axios
-        .get(
-            process.env.VUE_APP_SERVER_URL +
-            "/api/movies/moviesActedIn/" +
-            this.actor.id
-        )
-        .then((response) => {
-          this.actedInMovies = response.data;
-        });
+    let URL1 =
+        process.env.VUE_APP_SERVER_URL + "/api/actors/" + this.$route.params.id;
+    let URL2 =
+        process.env.VUE_APP_SERVER_URL +
+        "/api/movies/moviesActedIn/" +
+        this.$route.params.id;
+
+    const promise1 = axios.get(URL1);
+    const promise2 = axios.get(URL2);
+
+    Promise.all([promise1, promise2]).then((values) => {
+      this.actor = values[0].data;
+      this.actedInMovies = values[1].data;
+    });
   },
   methods: {
     redirectToMovie(movieId) {
-      axios
-          .get(process.env.VUE_APP_SERVER_URL + "/api/movies/" + movieId)
-          .then((response) => {
-            this.$router.push({
-              name: "movieDetails",
-              params: {movie: response.data},
-            });
-          });
+      this.$router.push({
+        name: "movieDetails",
+        params: {id: movieId},
+      });
     },
   },
 };
