@@ -40,10 +40,11 @@ public class MovieAPIController {
 
     @GetMapping("/review/{movieId}")
     public Collection<ReviewedByUserDTO> getMovieReview(@PathVariable("movieId") Long movieId) {
-        Collection<ReviewedByUser> reviewedByUsers = this.movieService.getMovieReview(movieId).getReviewedByUsers();
-        if (reviewedByUsers == null) {
+        Movie m = this.movieService.getMovieReview(movieId);
+        if (m == null) {
             return new ArrayList<>();
         }
+        Collection<ReviewedByUser> reviewedByUsers = m.getReviewedByUsers();
         Collection<ReviewedByUserDTO> reviewed = new ArrayList<>();
         for (ReviewedByUser r : reviewedByUsers) {
             ReviewedByUserDTO aux = modelMapper.map(r, ReviewedByUserDTO.class);

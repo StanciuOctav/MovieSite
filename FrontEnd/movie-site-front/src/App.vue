@@ -68,13 +68,9 @@ export default {
   data: () => ({
     btns: [["Custom", "b-xl"]],
     colors: ["deep-purple accent-4"],
-    items: [
-      /* { title: "Watchlist" }, */
-      {title: "Account details"},
-      {title: "Logout"},
-    ],
+    items: [{title: "Account details"}, {title: "Logout"}],
     currUrl: window.location.href,
-    loggedIn: true,
+    loggedIn: false,
   }),
   created() {
     if (this.currUrl === "http://localhost:8081/") {
@@ -106,9 +102,6 @@ export default {
               });
             });
       }
-      /*       if (name === "Watchlist") {
-        console.log("Redirecting to watchlist");
-      } */
     },
     updateLogin() {
       this.loggedIn = !this.loggedIn;

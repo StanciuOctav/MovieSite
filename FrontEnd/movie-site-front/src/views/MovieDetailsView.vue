@@ -167,7 +167,7 @@ export default {
             .then((response) => {
               alert(response.data);
               this.reviewContentToAdd = null;
-              this.$router.push({name: "home"});
+              this.$router.go();
             });
       } else {
         alert("Your review content is empty!");
@@ -185,7 +185,7 @@ export default {
           .then((response) => {
             alert(response.data);
             this.userHasReview = false;
-            this.$router.push({name: "home"});
+            this.$router.go();
           });
     },
   },
