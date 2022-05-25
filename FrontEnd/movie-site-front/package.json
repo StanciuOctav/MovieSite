@@ -9,10 +9,14 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
+    "sockjs": "^0.3.24",
+    "sockjs-client": "^1.6.0",
     "vue": "^2.6.14",
     "vue-axios": "^3.4.1",
     "vue-router": "^3.5.1",
-    "vuetify": "^2.6.0"
+    "vue-socket.io": "^3.0.10",
+    "vuetify": "^2.6.0",
+    "webstomp-client": "^1.2.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

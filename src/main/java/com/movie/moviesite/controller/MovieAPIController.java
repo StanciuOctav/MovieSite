@@ -1,6 +1,5 @@
 package com.movie.moviesite.controller;
 
-import com.movie.moviesite.dto.ActorDTO;
 import com.movie.moviesite.dto.MovieDTO;
 import com.movie.moviesite.relationshipDTO.ReviewedByUserDTO;
 import com.movie.moviesite.dto.UserDTO;
@@ -10,6 +9,8 @@ import com.movie.moviesite.service.MovieServiceImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -23,11 +24,14 @@ import java.util.stream.Collectors;
 public class MovieAPIController {
     private final MovieServiceImpl movieService;
     private final ModelMapper modelMapper;
+    private final SimpMessagingTemplate messagingTemplate;
+    String destiantion = "/topic/messages";
 
     @Autowired
-    public MovieAPIController(MovieServiceImpl movieService, ModelMapper modelMapper) {
+    public MovieAPIController(MovieServiceImpl movieService, ModelMapper modelMapper, SimpMessagingTemplate messagingTemplate) {
         this.movieService = movieService;
         this.modelMapper = modelMapper;
+        this.messagingTemplate = messagingTemplate;
     }
 
     @GetMapping("/reviewed/{email}")

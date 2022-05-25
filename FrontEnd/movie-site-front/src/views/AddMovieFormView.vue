@@ -64,11 +64,16 @@
 <script>
 import axios from "axios";
 import MovieModel from "@/models/MovieModel";
+import SockJS from "sockjs-client";
+import Stomp from "webstomp-client";
 
 export default {
   name: "Home",
   data() {
     return {
+      received_messages: [],
+      send_message: null,
+      connected: false,
       valid: true,
       movieModel: new MovieModel(),
       selectDirector: null,
@@ -106,6 +111,23 @@ export default {
             }
           }
         });
+    this.socket = new SockJS("http://localhost:8080/gs-guide-websocket");
+    this.stompClient = Stomp.over(this.socket);
+    this.stompClient.connect(
+        {},
+        (frame) => {
+          this.connected = true;
+          console.log(frame);
+          this.stompClient.subscribe("/topic/greetings", (tick) => {
+            console.log(tick);
+            this.received_messages.push(JSON.parse(tick.body).content);
+          });
+        },
+        (error) => {
+          console.log(error);
+          this.connected = false;
+        }
+    );
   },
   methods: {
     addMovie() {
@@ -114,6 +136,12 @@ export default {
         this.movieModel
             .createMovieModel()
             .then(() => {
+              console.log("Send message:" + this.send_message);
+              if (this.stompClient && this.stompClient.connected) {
+                const msg = {name: this.send_message};
+                console.log(JSON.stringify(msg));
+                this.stompClient.send("/app/hello", JSON.stringify(msg), {});
+              }
               alert(this.movieModel.name + " was added");
               this.$router.push({name: "home"});
             })
