@@ -120,6 +120,7 @@ export default {
           console.log(frame);
           this.stompClient.subscribe("/topic/greetings", (tick) => {
             console.log(tick);
+            alert("Movie added");
             this.received_messages.push(JSON.parse(tick.body).content);
           });
         },

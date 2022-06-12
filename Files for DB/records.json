@@ -4,32 +4,101 @@
 "identity": 0,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 120000000,
-"name": "Al Pacino",
-"age": 81
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 120000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg",
+        "name": "Al Pacino",
+        "age": 81
       }
     },
     "b": {
-"identity": 18,
-"start": 0,
-"end": 12,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 12,
-"labels": [
+      "identity": 12,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Heat",
-"genre": "Drama",
-"releaseYear": 1995
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+        "name": "Heat",
+        "genre": "Drama",
+        "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+        "releaseYear": 1995
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 0,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 120000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg",
+          "name": "Al Pacino",
+          "age": 81
+        }
+      },
+      "end": {
+        "identity": 12,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+          "name": "Heat",
+          "genre": "Drama",
+          "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+          "releaseYear": 1995
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 0,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 120000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg",
+              "name": "Al Pacino",
+              "age": 81
+            }
+          },
+          "relationship": {
+            "identity": 24,
+            "start": 0,
+            "end": 12,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 12,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+              "name": "Heat",
+              "genre": "Drama",
+              "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+              "releaseYear": 1995
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 24,
+      "start": 0,
+      "end": 12,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -38,32 +107,101 @@
 "identity": 1,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 500000000,
-"name": "Robert De Niro",
-"age": 78
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 500000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+        "name": "Robert De Niro",
+        "age": 78
       }
     },
     "b": {
-"identity": 6,
-"start": 1,
-"end": 13,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 13,
-"labels": [
+      "identity": 13,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Taxi Driver",
-"genre": "Drama",
-"releaseYear": 1976
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+        "name": "Taxi Driver",
+        "genre": "Drama",
+        "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+        "releaseYear": 1976
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 1,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 500000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+          "name": "Robert De Niro",
+          "age": 78
+        }
+      },
+      "end": {
+        "identity": 13,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+          "name": "Taxi Driver",
+          "genre": "Drama",
+          "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+          "releaseYear": 1976
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 1,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 500000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+              "name": "Robert De Niro",
+              "age": 78
+            }
+          },
+          "relationship": {
+            "identity": 26,
+            "start": 1,
+            "end": 13,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 13,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+              "name": "Taxi Driver",
+              "genre": "Drama",
+              "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+              "releaseYear": 1976
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 26,
+      "start": 1,
+      "end": 13,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -72,32 +210,101 @@
 "identity": 1,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 500000000,
-"name": "Robert De Niro",
-"age": 78
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 500000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+        "name": "Robert De Niro",
+        "age": 78
       }
     },
     "b": {
-"identity": 5,
-"start": 1,
-"end": 12,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 12,
-"labels": [
+      "identity": 12,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Heat",
-"genre": "Drama",
-"releaseYear": 1995
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+        "name": "Heat",
+        "genre": "Drama",
+        "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+        "releaseYear": 1995
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 1,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 500000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+          "name": "Robert De Niro",
+          "age": 78
+        }
+      },
+      "end": {
+        "identity": 12,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+          "name": "Heat",
+          "genre": "Drama",
+          "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+          "releaseYear": 1995
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 1,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 500000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg",
+              "name": "Robert De Niro",
+              "age": 78
+            }
+          },
+          "relationship": {
+            "identity": 25,
+            "start": 1,
+            "end": 12,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 12,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+              "name": "Heat",
+              "genre": "Drama",
+              "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+              "releaseYear": 1995
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 25,
+      "start": 1,
+      "end": 12,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -106,66 +313,307 @@
 "identity": 2,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 120000000,
-"name": "Christian Bale",
-"age": 48
+],
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 120000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+        "name": "Christian Bale",
+        "age": 48
       }
     },
     "b": {
-"identity": 11,
-"start": 2,
-"end": 15,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 15,
-"labels": [
+      "identity": 19,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"genre": "Action",
-"name": "The Dark Knight",
-"releaseYear": 2008
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+        "genre": "Adventure",
+        "name": "Mowgli: Legend of the Jungley",
+        "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+        "releaseYear": 2018
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 2,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 120000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+          "name": "Christian Bale",
+          "age": 48
+        }
+      },
+      "end": {
+        "identity": 19,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+          "genre": "Adventure",
+          "name": "Mowgli: Legend of the Jungley",
+          "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+          "releaseYear": 2018
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 2,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 120000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+              "name": "Christian Bale",
+              "age": 48
+            }
+          },
+          "relationship": {
+            "identity": 31,
+            "start": 2,
+            "end": 19,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 19,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+              "genre": "Adventure",
+              "name": "Mowgli: Legend of the Jungley",
+              "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+              "releaseYear": 2018
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 31,
+      "start": 2,
+      "end": 19,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
   {
     "a": {
-"identity": 2,
-"labels": [
+      "identity": 2,
+      "labels": [
         "ACTOR"
       ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 120000000,
-"name": "Christian Bale",
-"age": 48
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 120000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+        "name": "Christian Bale",
+        "age": 48
       }
     },
     "b": {
-"identity": 10,
-"start": 2,
-"end": 19,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 19,
-"labels": [
+      "identity": 15,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"genre": "Adventure",
-"name": "Mowgli: Legend of the Jungley",
-"releaseYear": 2018
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        "genre": "Action",
+        "name": "The Dark Knight",
+        "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+        "releaseYear": 2008
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 2,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 120000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+          "name": "Christian Bale",
+          "age": 48
+        }
+      },
+      "end": {
+        "identity": 15,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+          "genre": "Action",
+          "name": "The Dark Knight",
+          "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+          "releaseYear": 2008
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 2,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 120000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/qCpZn2e3dimwbryLnqxZuI88PTi.jpg",
+              "name": "Christian Bale",
+              "age": 48
+            }
+          },
+          "relationship": {
+            "identity": 29,
+            "start": 2,
+            "end": 15,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 15,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+              "genre": "Action",
+              "name": "The Dark Knight",
+              "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+              "releaseYear": 2008
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 29,
+      "start": 2,
+      "end": 15,
+      "type": "ACTED_IN",
+      "properties": {
+      }
+    }
+  },
+  {
+    "a": {
+      "identity": 3,
+      "labels": [
+        "ACTOR"
+      ],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 260000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+        "name": "Leonardo DiCaprio",
+        "age": 47
+      }
+    },
+    "b": {
+      "identity": 10,
+      "labels": [
+        "MOVIE"
+      ],
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+        "name": "Inception",
+        "genre": "Action",
+        "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 3,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 260000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+          "name": "Leonardo DiCaprio",
+          "age": 47
+        }
+      },
+      "end": {
+        "identity": 10,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+          "name": "Inception",
+          "genre": "Action",
+          "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 3,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 260000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+              "name": "Leonardo DiCaprio",
+              "age": 47
+            }
+          },
+          "relationship": {
+            "identity": 42,
+            "start": 3,
+            "end": 10,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 10,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+              "name": "Inception",
+              "genre": "Action",
+              "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 42,
+      "start": 3,
+      "end": 10,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -174,32 +622,101 @@
 "identity": 3,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "US",
-"netWorth": 260000000,
-"name": "Leonardo DiCaprio",
-"age": 47
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 260000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+        "name": "Leonardo DiCaprio",
+        "age": 47
       }
     },
     "b": {
-"identity": 14,
-"start": 3,
-"end": 11,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 11,
-"labels": [
+      "identity": 11,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Shutter Island",
-"genre": "Mistery",
-"releaseYear": 2010
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+        "name": "Shutter Island",
+        "genre": "Mistery",
+        "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 3,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 260000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+          "name": "Leonardo DiCaprio",
+          "age": 47
+        }
+      },
+      "end": {
+        "identity": 11,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+          "name": "Shutter Island",
+          "genre": "Mistery",
+          "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 3,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 260000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+              "name": "Leonardo DiCaprio",
+              "age": 47
+            }
+          },
+          "relationship": {
+            "identity": 22,
+            "start": 3,
+            "end": 11,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 11,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+              "name": "Shutter Island",
+              "genre": "Mistery",
+              "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 22,
+      "start": 3,
+      "end": 11,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -208,66 +725,101 @@
 "identity": 3,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "US",
-"netWorth": 260000000,
-"name": "Leonardo DiCaprio",
-"age": 47
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 260000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+        "name": "Leonardo DiCaprio",
+        "age": 47
       }
     },
     "b": {
-"identity": 13,
-"start": 3,
-"end": 14,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 14,
-"labels": [
+      "identity": 14,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "The Departed",
-"genre": "Drama",
-"releaseYear": 2006
-      }
-    }
-  },
-  {
-    "a": {
-"identity": 3,
-"labels": [
-        "ACTOR"
-      ],
-"properties": {
-"bornIn": "US",
-"netWorth": 260000000,
-"name": "Leonardo DiCaprio",
-"age": 47
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+        "name": "The Departed",
+        "genre": "Drama",
+        "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+        "releaseYear": 2006
       }
     },
-    "b": {
-"identity": 12,
-"start": 3,
-"end": 10,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 10,
-"labels": [
-        "MOVIE"
+    "p": {
+      "start": {
+        "identity": 3,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 260000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+          "name": "Leonardo DiCaprio",
+          "age": 47
+        }
+      },
+      "end": {
+        "identity": 14,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+          "name": "The Departed",
+          "genre": "Drama",
+          "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+          "releaseYear": 2006
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 3,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 260000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/wo2hJpn04vbtmh0B9utCFdsQhxM.jpg",
+              "name": "Leonardo DiCaprio",
+              "age": 47
+            }
+          },
+          "relationship": {
+            "identity": 28,
+            "start": 3,
+            "end": 14,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 14,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+              "name": "The Departed",
+              "genre": "Drama",
+              "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+              "releaseYear": 2006
+            }
+          }
+        }
       ],
-"properties": {
-"name": "Inception",
-"genre": "Action",
-"releaseYear": 2010
+      "length": 1.0
+    },
+    "r": {
+      "identity": 28,
+      "start": 3,
+      "end": 14,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -276,32 +828,101 @@
 "identity": 4,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 40000000,
-"name": "Benedict Cumberbatch",
-"age": 45
+],
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 40000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
+        "name": "Benedict Cumberbatch",
+        "age": 45
       }
     },
     "b": {
-"identity": 15,
-"start": 4,
-"end": 19,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 19,
-"labels": [
+      "identity": 19,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"genre": "Adventure",
-"name": "Mowgli: Legend of the Jungley",
-"releaseYear": 2018
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+        "genre": "Adventure",
+        "name": "Mowgli: Legend of the Jungley",
+        "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+        "releaseYear": 2018
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 4,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 40000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
+          "name": "Benedict Cumberbatch",
+          "age": 45
+        }
+      },
+      "end": {
+        "identity": 19,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+          "genre": "Adventure",
+          "name": "Mowgli: Legend of the Jungley",
+          "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+          "releaseYear": 2018
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 4,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 40000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/fBEucxECxGLKVHBznO0qHtCGiMO.jpg",
+              "name": "Benedict Cumberbatch",
+              "age": 45
+            }
+          },
+          "relationship": {
+            "identity": 30,
+            "start": 4,
+            "end": 19,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 19,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+              "genre": "Adventure",
+              "name": "Mowgli: Legend of the Jungley",
+              "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+              "releaseYear": 2018
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 30,
+      "start": 4,
+      "end": 19,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -310,134 +931,611 @@
 "identity": 5,
 "labels": [
         "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 180000000,
-"name": "Andy Serkis",
-"age": 57
+],
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 180000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+        "name": "Andy Serkis",
+        "age": 57
       }
     },
     "b": {
-"identity": 1,
-"start": 5,
-"end": 19,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 19,
-"labels": [
+      "identity": 8,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"genre": "Adventure",
-"name": "Mowgli: Legend of the Jungley",
-"releaseYear": 2018
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+        "name": "Venom",
+        "genre": "Action",
+        "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+        "releaseYear": 2018
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 5,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 180000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+          "name": "Andy Serkis",
+          "age": 57
+        }
+      },
+      "end": {
+        "identity": 8,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+          "name": "Venom",
+          "genre": "Action",
+          "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+          "releaseYear": 2018
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 5,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 180000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+              "name": "Andy Serkis",
+              "age": 57
+            }
+          },
+          "relationship": {
+            "identity": 16,
+            "start": 5,
+            "end": 8,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 8,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+              "name": "Venom",
+              "genre": "Action",
+              "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+              "releaseYear": 2018
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 16,
+      "start": 5,
+      "end": 8,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
   {
     "a": {
-"identity": 5,
-"labels": [
+      "identity": 5,
+      "labels": [
         "DIRECTOR"
       ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 180000000,
-"name": "Andy Serkis",
-"age": 57
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 180000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+        "name": "Andy Serkis",
+        "age": 57
       }
     },
     "b": {
-"identity": 0,
-"start": 5,
-"end": 8,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 8,
-"labels": [
+      "identity": 19,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Venom",
-"genre": "Action",
-"releaseYear": 2018
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+        "genre": "Adventure",
+        "name": "Mowgli: Legend of the Jungley",
+        "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+        "releaseYear": 2018
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 5,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 180000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+          "name": "Andy Serkis",
+          "age": 57
+        }
+      },
+      "end": {
+        "identity": 19,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+          "genre": "Adventure",
+          "name": "Mowgli: Legend of the Jungley",
+          "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+          "releaseYear": 2018
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 5,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 180000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/eNGqhebQ4cDssjVeNFrKtUvweV5.jpg",
+              "name": "Andy Serkis",
+              "age": 57
+            }
+          },
+          "relationship": {
+            "identity": 1,
+            "start": 5,
+            "end": 19,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 19,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/wdj8FK2bCA7iNtZRSzJHrltAwnr.jpg",
+              "genre": "Adventure",
+              "name": "Mowgli: Legend of the Jungley",
+              "description": "Mowgli: Legend of the Jungle (also known and stylized on screen simply as Mowgli) is a 2018 British-American adventure drama film directed by Andy Serkis with a screenplay by Callie Kloves, based on stories collected in All the Mowgli Stories by Rudyard Kipling. The film stars Rohan Chand, Matthew Rhys, and Freida Pinto, along with voice and motion capture performances from Christian Bale, Cate Blanchett, Benedict Cumberbatch, Naomie Harris, and Serkis. In the film, an orphaned human boy who was raised by wolves, sets out on a journey to find a human village while evading Shere Khan.",
+              "releaseYear": 2018
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 1,
+      "start": 5,
+      "end": 19,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
   {
     "a": {
-"identity": 6,
-"labels": [
+      "identity": 6,
+      "labels": [
         "ACTOR"
       ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 45000000,
-"name": "Tom Hardy",
-"age": 44
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 45000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/sGMA6pA2D6X0gun49igJT3piHs3.jpg",
+        "name": "Tom Hardy",
+        "age": 44
       }
     },
     "b": {
-"identity": 17,
-"start": 6,
-"end": 8,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 8,
-"labels": [
+      "identity": 8,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Venom",
-"genre": "Action",
-"releaseYear": 2018
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+        "name": "Venom",
+        "genre": "Action",
+        "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+        "releaseYear": 2018
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 6,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 45000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/sGMA6pA2D6X0gun49igJT3piHs3.jpg",
+          "name": "Tom Hardy",
+          "age": 44
+        }
+      },
+      "end": {
+        "identity": 8,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+          "name": "Venom",
+          "genre": "Action",
+          "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+          "releaseYear": 2018
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 6,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 45000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/sGMA6pA2D6X0gun49igJT3piHs3.jpg",
+              "name": "Tom Hardy",
+              "age": 44
+            }
+          },
+          "relationship": {
+            "identity": 15,
+            "start": 6,
+            "end": 8,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 8,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg",
+              "name": "Venom",
+              "genre": "Action",
+              "description": "Venom is a 2018 American superhero film featuring the Marvel Comics character of the same name, produced by Columbia Pictures in association with Marvel[5] and Tencent Pictures. Distributed by Sony Pictures Releasing, it is the first film in Sony's Spider-Man Universe (SSU). Directed by Ruben Fleischer from a screenplay by Jeff Pinkner, Scott Rosenberg, and Kelly Marcel, it stars Tom Hardy as Eddie Brock and Venom alongside Michelle Williams, Riz Ahmed, Scott Haze, and Reid Scott. In the film, struggling journalist Brock gains superpowers after becoming the host of an alien symbiote, Venom, whose species plans to invade Earth.",
+              "releaseYear": 2018
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 15,
+      "start": 6,
+      "end": 8,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
   {
     "a": {
-"identity": 6,
-"labels": [
-        "ACTOR"
+      "identity": 7,
+      "labels": [
+        "USER"
       ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 45000000,
-"name": "Tom Hardy",
-"age": 44
+      "properties": {
+        "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+        "name": "USER octav",
+        "age": 21,
+        "email": "octav@email.com"
       }
     },
     "b": {
-"identity": 16,
-"start": 6,
-"end": 10,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 10,
-"labels": [
+      "identity": 10,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Inception",
-"genre": "Action",
-"releaseYear": 2010
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+        "name": "Inception",
+        "genre": "Action",
+        "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 7,
+        "labels": [
+          "USER"
+        ],
+        "properties": {
+          "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+          "name": "USER octav",
+          "age": 21,
+          "email": "octav@email.com"
+        }
+      },
+      "end": {
+        "identity": 10,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+          "name": "Inception",
+          "genre": "Action",
+          "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 7,
+            "labels": [
+              "USER"
+            ],
+            "properties": {
+              "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+              "name": "USER octav",
+              "age": 21,
+              "email": "octav@email.com"
+            }
+          },
+          "relationship": {
+            "identity": 40,
+            "start": 7,
+            "end": 10,
+            "type": "IN_WATCHLIST",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 10,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+              "name": "Inception",
+              "genre": "Action",
+              "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 40,
+      "start": 7,
+      "end": 10,
+      "type": "IN_WATCHLIST",
+      "properties": {
+      }
+    }
+  },
+  {
+    "a": {
+      "identity": 7,
+      "labels": [
+        "USER"
+      ],
+      "properties": {
+        "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+        "name": "USER octav",
+        "age": 21,
+        "email": "octav@email.com"
+      }
+    },
+    "b": {
+      "identity": 11,
+      "labels": [
+        "MOVIE"
+      ],
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+        "name": "Shutter Island",
+        "genre": "Mistery",
+        "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 7,
+        "labels": [
+          "USER"
+        ],
+        "properties": {
+          "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+          "name": "USER octav",
+          "age": 21,
+          "email": "octav@email.com"
+        }
+      },
+      "end": {
+        "identity": 11,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+          "name": "Shutter Island",
+          "genre": "Mistery",
+          "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 7,
+            "labels": [
+              "USER"
+            ],
+            "properties": {
+              "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+              "name": "USER octav",
+              "age": 21,
+              "email": "octav@email.com"
+            }
+          },
+          "relationship": {
+            "identity": 17,
+            "start": 7,
+            "end": 11,
+            "type": "REVIEWED",
+            "properties": {
+              "content": "new review"
+            }
+          },
+          "end": {
+            "identity": 11,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+              "name": "Shutter Island",
+              "genre": "Mistery",
+              "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 17,
+      "start": 7,
+      "end": 11,
+      "type": "REVIEWED",
+      "properties": {
+        "content": "new review"
+      }
+    }
+  },
+  {
+    "a": {
+      "identity": 7,
+      "labels": [
+        "USER"
+      ],
+      "properties": {
+        "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+        "name": "USER octav",
+        "age": 21,
+        "email": "octav@email.com"
+      }
+    },
+    "b": {
+      "identity": 10,
+      "labels": [
+        "MOVIE"
+      ],
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+        "name": "Inception",
+        "genre": "Action",
+        "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 7,
+        "labels": [
+          "USER"
+        ],
+        "properties": {
+          "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+          "name": "USER octav",
+          "age": 21,
+          "email": "octav@email.com"
+        }
+      },
+      "end": {
+        "identity": 10,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+          "name": "Inception",
+          "genre": "Action",
+          "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 7,
+            "labels": [
+              "USER"
+            ],
+            "properties": {
+              "password": "$2a$10$rTGH8OEGA/DpZMy0cX03oedUx2WvkhGtTpeuUMZX8rrbumju8u4te",
+              "name": "USER octav",
+              "age": 21,
+              "email": "octav@email.com"
+            }
+          },
+          "relationship": {
+            "identity": 32,
+            "start": 7,
+            "end": 10,
+            "type": "REVIEWED",
+            "properties": {
+              "content": "One of the best movies I have ever seen"
+            }
+          },
+          "end": {
+            "identity": 10,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+              "name": "Inception",
+              "genre": "Action",
+              "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 32,
+      "start": 7,
+      "end": 10,
+      "type": "REVIEWED",
+      "properties": {
+        "content": "One of the best movies I have ever seen"
       }
     }
   },
@@ -446,32 +1544,101 @@
 "identity": 9,
 "labels": [
         "ACTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 400000000,
-"name": "Jack Nicholson",
-"age": 84
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 400000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/gNMokbwBSrBEMiv3qDBomloe7jD.jpg",
+        "name": "Jack Nicholson",
+        "age": 84
       }
     },
     "b": {
-"identity": 19,
-"start": 9,
-"end": 14,
-"type": "PLAYED_IN",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 14,
-"labels": [
+      "identity": 14,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "The Departed",
-"genre": "Drama",
-"releaseYear": 2006
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+        "name": "The Departed",
+        "genre": "Drama",
+        "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+        "releaseYear": 2006
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 9,
+        "labels": [
+          "ACTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 400000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/gNMokbwBSrBEMiv3qDBomloe7jD.jpg",
+          "name": "Jack Nicholson",
+          "age": 84
+        }
+      },
+      "end": {
+        "identity": 14,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+          "name": "The Departed",
+          "genre": "Drama",
+          "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+          "releaseYear": 2006
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 9,
+            "labels": [
+              "ACTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 400000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/gNMokbwBSrBEMiv3qDBomloe7jD.jpg",
+              "name": "Jack Nicholson",
+              "age": 84
+            }
+          },
+          "relationship": {
+            "identity": 27,
+            "start": 9,
+            "end": 14,
+            "type": "ACTED_IN",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 14,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+              "name": "The Departed",
+              "genre": "Drama",
+              "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+              "releaseYear": 2006
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 27,
+      "start": 9,
+      "end": 14,
+      "type": "ACTED_IN",
+      "properties": {
       }
     }
   },
@@ -480,66 +1647,307 @@
 "identity": 16,
 "labels": [
         "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 250000000,
-"name": "Christopher Nolan",
-"age": 51
+],
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 250000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+        "name": "Christopher Nolan",
+        "age": 51
       }
     },
     "b": {
-"identity": 3,
-"start": 16,
-"end": 15,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 15,
-"labels": [
+      "identity": 10,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"genre": "Action",
-"name": "The Dark Knight",
-"releaseYear": 2008
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+        "name": "Inception",
+        "genre": "Action",
+        "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 16,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 250000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+          "name": "Christopher Nolan",
+          "age": 51
+        }
+      },
+      "end": {
+        "identity": 10,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+          "name": "Inception",
+          "genre": "Action",
+          "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 16,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 250000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+              "name": "Christopher Nolan",
+              "age": 51
+            }
+          },
+          "relationship": {
+            "identity": 41,
+            "start": 16,
+            "end": 10,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 10,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+              "name": "Inception",
+              "genre": "Action",
+              "description": "Inception is a 2010 science fiction action film[4][5][6] written and directed by Christopher Nolan, who also produced the film with Emma Thomas, his wife. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating the subconscious of his targets. He is offered a chance to have his criminal history erased as payment for the implantation of another person's idea into a target's subconscious.[7] The ensemble cast includes Ken Watanabe, Joseph Gordon-Levitt, Marion Cotillard, Elliot Page,[a] Tom Hardy, Dileep Rao, Cillian Murphy, Tom Berenger, and Michael Caine.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 41,
+      "start": 16,
+      "end": 10,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
   {
     "a": {
-"identity": 16,
-"labels": [
+      "identity": 16,
+      "labels": [
         "DIRECTOR"
       ],
-"properties": {
-"bornIn": "UK",
-"netWorth": 250000000,
-"name": "Christopher Nolan",
-"age": 51
+      "properties": {
+        "bornIn": "UK",
+        "netWorth": 250000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+        "name": "Christopher Nolan",
+        "age": 51
       }
     },
     "b": {
-"identity": 2,
-"start": 16,
-"end": 10,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 10,
-"labels": [
+      "identity": 15,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Inception",
-"genre": "Action",
-"releaseYear": 2010
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+        "genre": "Action",
+        "name": "The Dark Knight",
+        "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+        "releaseYear": 2008
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 16,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "UK",
+          "netWorth": 250000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+          "name": "Christopher Nolan",
+          "age": 51
+        }
+      },
+      "end": {
+        "identity": 15,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+          "genre": "Action",
+          "name": "The Dark Knight",
+          "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+          "releaseYear": 2008
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 16,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "UK",
+              "netWorth": 250000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/6kJBoNiogwdcXgcRn88kDkdFNKR.jpg",
+              "name": "Christopher Nolan",
+              "age": 51
+            }
+          },
+          "relationship": {
+            "identity": 3,
+            "start": 16,
+            "end": 15,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 15,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+              "genre": "Action",
+              "name": "The Dark Knight",
+              "description": "The Dark Knight is a 2008 superhero film directed, co-produced, and co-written by Christopher Nolan. Based on the DC Comics character Batman, the film is the second installment of Nolan's The Dark Knight Trilogy and a sequel to 2005's Batman Begins, starring Christian Bale and supported by Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal, and Morgan Freeman. In the film, Bruce Wayne / Batman (Bale), Police Lieutenant James Gordon (Oldman) and District Attorney Harvey Dent (Eckhart) form an alliance to dismantle organized crime in Gotham City, but are menaced by an anarchistic mastermind known as the Joker (Ledger), who seeks to undermine Batman's influence and throw the city into chaos.",
+              "releaseYear": 2008
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 3,
+      "start": 16,
+      "end": 15,
+      "type": "DIRECTED",
+      "properties": {
+      }
+    }
+  },
+  {
+    "a": {
+      "identity": 17,
+      "labels": [
+        "DIRECTOR"
+      ],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 200000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+        "name": "Martin Scorsese",
+        "age": 79
+      }
+    },
+    "b": {
+      "identity": 11,
+      "labels": [
+        "MOVIE"
+      ],
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+        "name": "Shutter Island",
+        "genre": "Mistery",
+        "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+        "releaseYear": 2010
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 17,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 200000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+          "name": "Martin Scorsese",
+          "age": 79
+        }
+      },
+      "end": {
+        "identity": 11,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+          "name": "Shutter Island",
+          "genre": "Mistery",
+          "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+          "releaseYear": 2010
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 17,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 200000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+              "name": "Martin Scorsese",
+              "age": 79
+            }
+          },
+          "relationship": {
+            "identity": 21,
+            "start": 17,
+            "end": 11,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 11,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kve20tXwUZpu4GUX8l6X7Z4jmL6.jpg",
+              "name": "Shutter Island",
+              "genre": "Mistery",
+              "description": "Shutter Island is a 2010 American neo-noir psychological horror film directed by Martin Scorsese and written by Laeta Kalogridis, based on Dennis Lehane's 2003 novel of the same name. Leonardo DiCaprio stars as Deputy U.S. Marshal Edward 'Teddy' Daniels, who is investigating a psychiatric facility on Shutter Island after one of the patients goes missing. Mark Ruffalo plays his partner and fellow deputy marshal, Ben Kingsley is the facility's lead psychiatrist, Max von Sydow is a German doctor, and Michelle Williams is Daniels' wife. Released on February 19, 2010, the film received mostly positive reviews from critics, was chosen by National Board of Review as one of the top ten films of 2010, and grossed over $294 million worldwide.",
+              "releaseYear": 2010
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 21,
+      "start": 17,
+      "end": 11,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
@@ -548,32 +1956,101 @@
 "identity": 17,
 "labels": [
         "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 200000000,
-"name": "Martin Scorsese",
-"age": 79
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 200000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+        "name": "Martin Scorsese",
+        "age": 79
       }
     },
     "b": {
-"identity": 9,
-"start": 17,
-"end": 14,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 14,
-"labels": [
+      "identity": 14,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "The Departed",
-"genre": "Drama",
-"releaseYear": 2006
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+        "name": "The Departed",
+        "genre": "Drama",
+        "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+        "releaseYear": 2006
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 17,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 200000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+          "name": "Martin Scorsese",
+          "age": 79
+        }
+      },
+      "end": {
+        "identity": 14,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+          "name": "The Departed",
+          "genre": "Drama",
+          "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+          "releaseYear": 2006
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 17,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 200000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+              "name": "Martin Scorsese",
+              "age": 79
+            }
+          },
+          "relationship": {
+            "identity": 9,
+            "start": 17,
+            "end": 14,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 14,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/kWWAt2FMRbqLFFy8o5R4Zr8cMAb.jpg",
+              "name": "The Departed",
+              "genre": "Drama",
+              "description": "The film takes place in Boston. Irish Mob boss Frank Costello (Nicholson) plants Colin Sullivan (Damon) as a mole within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (DiCaprio) to infiltrate Costello's crew. When both sides realize the situation, Sullivan and Costigan each attempt to discover the other's identity before they are found out.",
+              "releaseYear": 2006
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 9,
+      "start": 17,
+      "end": 14,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
@@ -582,66 +2059,101 @@
 "identity": 17,
 "labels": [
         "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 200000000,
-"name": "Martin Scorsese",
-"age": 79
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 200000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+        "name": "Martin Scorsese",
+        "age": 79
       }
     },
     "b": {
-"identity": 8,
-"start": 17,
-"end": 13,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 13,
-"labels": [
+      "identity": 13,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Taxi Driver",
-"genre": "Drama",
-"releaseYear": 1976
-      }
-    }
-  },
-  {
-    "a": {
-"identity": 17,
-"labels": [
-        "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "USA",
-"netWorth": 200000000,
-"name": "Martin Scorsese",
-"age": 79
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+        "name": "Taxi Driver",
+        "genre": "Drama",
+        "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+        "releaseYear": 1976
       }
     },
-    "b": {
-"identity": 7,
-"start": 17,
-"end": 11,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 11,
-"labels": [
-        "MOVIE"
+    "p": {
+      "start": {
+        "identity": 17,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 200000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+          "name": "Martin Scorsese",
+          "age": 79
+        }
+      },
+      "end": {
+        "identity": 13,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+          "name": "Taxi Driver",
+          "genre": "Drama",
+          "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+          "releaseYear": 1976
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 17,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 200000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/uIDdPKGgVONXvFhDCXTye7t8qqW.jpg",
+              "name": "Martin Scorsese",
+              "age": 79
+            }
+          },
+          "relationship": {
+            "identity": 8,
+            "start": 17,
+            "end": 13,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 13,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+              "name": "Taxi Driver",
+              "genre": "Drama",
+              "description": "Taxi Driver is a 1976 American film directed by Martin Scorsese, written by Paul Schrader, and starring Robert De Niro, Jodie Foster, Cybill Shepherd, Harvey Keitel, Peter Boyle, Leonard Harris, and Albert Brooks. Set in a decaying and morally bankrupt New York City following the Vietnam War, the film follows Travis Bickle (De Niro), a taxi driver and veteran, and his deteriorating mental state as he works nights in the city.",
+              "releaseYear": 1976
+            }
+          }
+        }
       ],
-"properties": {
-"name": "Shutter Island",
-"genre": "Mistery",
-"releaseYear": 2010
+      "length": 1.0
+    },
+    "r": {
+      "identity": 8,
+      "start": 17,
+      "end": 13,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   },
@@ -650,32 +2162,101 @@
 "identity": 18,
 "labels": [
         "DIRECTOR"
-      ],
-"properties": {
-"bornIn": "SUA",
-"netWorth": 90000000,
-"name": "Michael Mann",
-"age": 79
+],
+      "properties": {
+        "bornIn": "US",
+        "netWorth": 90000000,
+        "imageURL": "https://www.themoviedb.org/t/p/original/1nRqwMyQuCkvNPAzDY5oOSfGZ6b.jpg",
+        "name": "Michael Mann",
+        "age": 79
       }
     },
     "b": {
-"identity": 4,
-"start": 18,
-"end": 12,
-"type": "DIRECTED",
-"properties": {
-
-      }
-    },
-    "c": {
-"identity": 12,
-"labels": [
+      "identity": 12,
+      "labels": [
         "MOVIE"
       ],
-"properties": {
-"name": "Heat",
-"genre": "Drama",
-"releaseYear": 1995
+      "properties": {
+        "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+        "name": "Heat",
+        "genre": "Drama",
+        "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+        "releaseYear": 1995
+      }
+    },
+    "p": {
+      "start": {
+        "identity": 18,
+        "labels": [
+          "DIRECTOR"
+        ],
+        "properties": {
+          "bornIn": "US",
+          "netWorth": 90000000,
+          "imageURL": "https://www.themoviedb.org/t/p/original/1nRqwMyQuCkvNPAzDY5oOSfGZ6b.jpg",
+          "name": "Michael Mann",
+          "age": 79
+        }
+      },
+      "end": {
+        "identity": 12,
+        "labels": [
+          "MOVIE"
+        ],
+        "properties": {
+          "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+          "name": "Heat",
+          "genre": "Drama",
+          "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+          "releaseYear": 1995
+        }
+      },
+      "segments": [
+        {
+          "start": {
+            "identity": 18,
+            "labels": [
+              "DIRECTOR"
+            ],
+            "properties": {
+              "bornIn": "US",
+              "netWorth": 90000000,
+              "imageURL": "https://www.themoviedb.org/t/p/original/1nRqwMyQuCkvNPAzDY5oOSfGZ6b.jpg",
+              "name": "Michael Mann",
+              "age": 79
+            }
+          },
+          "relationship": {
+            "identity": 4,
+            "start": 18,
+            "end": 12,
+            "type": "DIRECTED",
+            "properties": {
+            }
+          },
+          "end": {
+            "identity": 12,
+            "labels": [
+              "MOVIE"
+            ],
+            "properties": {
+              "imageURL": "https://www.themoviedb.org/t/p/original/obpPQskaVpSiC9RcJRB6iWDTCXS.jpg",
+              "name": "Heat",
+              "genre": "Drama",
+              "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives. Mann wrote the original script for Heat in 1979, basing it on Chicago police officer Chuck Adamson's pursuit of criminal Neil McCauley, after whom De Niro's character is named.[5] The script was first used for a television pilot developed by Mann, which became the 1989 television film L.A. Takedown after the pilot did not receive a series order. In 1994, Mann revisited the script to turn it into a feature film, co-producing the project with Art Linson. The film marks De Niro and Pacino's first on-screen appearance together following a period of acclaimed performances from both. Due to their esteemed reputations, promotion centered on their involvement.",
+              "releaseYear": 1995
+            }
+          }
+        }
+      ],
+      "length": 1.0
+    },
+    "r": {
+      "identity": 4,
+      "start": 18,
+      "end": 12,
+      "type": "DIRECTED",
+      "properties": {
       }
     }
   }
